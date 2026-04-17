@@ -1,0 +1,158 @@
+/* login.css - Styles pour la page de connexion (étudiant/enseignant) */
+
+/* ========== ROOT & GLOBAL ========== */
+.root, .login-root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d1b2e 0%, #1a2d4a 50%, #0d1b2e 100%);
+}
+
+/* ========== CARTE DE CONNEXION ========== */
+.card {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-border-color: rgba(74,158,221,0.3);
+    -fx-border-width: 0.5px;
+    -fx-border-radius: 16px;
+    -fx-background-radius: 16px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+}
+
+/* ========== BOUTONS DE RÔLE (Étudiant / Enseignant) ========== */
+.role-button {
+    -fx-padding: 12px 8px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-text-fill: #a0b8d0;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-alignment: center;
+    -fx-wrap-text: true;
+    -fx-background-color: rgba(255,255,255,0.03);
+    -fx-border-color: rgba(74,158,221,0.25);
+    -fx-border-width: 1px;
+}
+
+/* État sélectionné (actif) */
+.role-button:selected {
+    -fx-background-color: rgba(74,158,221,0.15);
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 1.5px;
+    -fx-text-fill: #e8f0f8;
+}
+
+/* Survol */
+.role-button:hover {
+    -fx-background-color: rgba(74,158,221,0.25);
+    -fx-border-color: #4a9edd;
+}
+
+/* Clic (pressé) */
+.role-button:pressed {
+    -fx-background-color: rgba(74,158,221,0.4);
+}
+
+/* Icônes SVG à l'intérieur des boutons */
+.role-button SVGPath {
+    -fx-stroke: #6a8aaa;
+    -fx-stroke-width: 1.8;
+    -fx-fill: none;
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.role-button:selected SVGPath {
+    -fx-stroke: #4a9edd;
+}
+
+.role-button:hover SVGPath {
+    -fx-stroke: #4a9edd;
+}
+
+/* ========== CHAMPS DE TEXTE (Identifiant & Mot de passe) ========== */
+.input-field {
+    -fx-background-color: rgba(255,255,255,0.06);
+    -fx-border-color: rgba(74,158,221,0.25);
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-text-fill: #e8f0f8;
+    -fx-prompt-text-fill: #4a6a88;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 12px;
+}
+
+/* Focus : bordure plus prononcée */
+.input-field:focused {
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 1.5px;
+    -fx-background-color: rgba(255,255,255,0.1);
+    -fx-effect: dropshadow(gaussian, rgba(74,158,221,0.3), 6, 0, 0, 0);
+}
+
+/* ========== BOUTON DE CONNEXION ========== */
+.login-button {
+    -fx-background-color: #4a9edd;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-cursor: hand;
+    -fx-letter-spacing: 0.5px;
+}
+
+.login-button:hover {
+    -fx-background-color: #3a8ecd;
+}
+
+.login-button:pressed {
+    -fx-background-color: #2a6eae;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
+}
+
+/* ========== LIEN "MOT DE PASSE OUBLIÉ ?" ========== */
+.forgot-link {
+    -fx-text-fill: #6a8aaa;
+    -fx-font-size: 12px;
+    -fx-cursor: hand;
+    -fx-alignment: center;
+}
+
+.forgot-link:hover {
+    -fx-text-fill: #4a9edd;
+    -fx-underline: true;
+}
+
+/* ========== BOUTON ADMIN (icône en bas à droite) ========== */
+.admin-trigger {
+    -fx-cursor: hand;
+    -fx-opacity: 0.7;
+}
+
+.admin-trigger:hover {
+    -fx-opacity: 1;
+}
+
+.admin-icon {
+    -fx-background-color: rgba(74,158,221,0.1);
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 22px;
+    -fx-background-radius: 22px;
+}
+
+.admin-icon:hover {
+    -fx-background-color: rgba(74,158,221,0.25);
+}
+
+/* ========== STYLES GÉNÉRAUX POUR LES LABELS ========== */
+.label-title {
+    -fx-font-size: 12px;
+    -fx-text-fill: #a0b8d0;
+    -fx-letter-spacing: 0.5px;
+}
+
+/* ========== ZONE D'ERREUR ========== */
+.error-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #e74c3c;
+    -fx-wrap-text: true;
+}

@@ -1,0 +1,115 @@
+/* dashboard.css - Styles pour le tableau de bord étudiant */
+
+/* ========== CONTENEURS PRINCIPAUX ========== */
+.root {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d1b2e, #1a2d4a);
+}
+
+/* ========== BARRE LATÉRALE (MENU) ========== */
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0b8d0;
+    -fx-font-size: 14px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+}
+
+.menu-button:hover {
+    -fx-background-color: rgba(74,158,221,0.2);
+    -fx-text-fill: white;
+}
+
+.menu-button:pressed {
+    -fx-background-color: rgba(74,158,221,0.4);
+}
+
+/* ========== CARTES D'INFORMATIONS ========== */
+.info-card {
+    -fx-background-color: rgba(255,255,255,0.05);
+    -fx-background-radius: 12px;
+    -fx-border-color: rgba(74,158,221,0.3);
+    -fx-border-radius: 12px;
+    -fx-padding: 20px;
+    -fx-spacing: 8px;
+    -fx-alignment: CENTER;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 8, 0, 0, 2);
+}
+
+.info-card:hover {
+    -fx-background-color: rgba(74,158,221,0.1);
+    -fx-border-color: #4a9edd;
+}
+
+/* ========== LABELS SPÉCIFIQUES (ID) ========== */
+#lblBienvenue {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+#lblCredits, #lblMoyenne, #lblCoursCount {
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4a9edd;
+}
+
+/* ========== BOUTON DE DÉCONNEXION ========== */
+#btnLogout {
+    -fx-background-color: #c0392b;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+#btnLogout:hover {
+    -fx-background-color: #a93226;
+}
+
+#btnLogout:pressed {
+    -fx-background-color: #8b1a1a;
+}
+
+/* ========== SCROLLPANE TRANSPARENT ========== */
+.scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ========== VBOX POUR LES LISTES (PROCHAINS COURS, DERNIÈRES NOTES) ========== */
+#vboxProchainsCours, #vboxDernieresNotes {
+    -fx-spacing: 8px;
+}
+
+/* Style des éléments à l'intérieur (créés dynamiquement) */
+.cours-item, .note-item {
+    -fx-text-fill: #e8f0f8;
+    -fx-padding: 8px 12px;
+    -fx-background-color: rgba(74,158,221,0.1);
+    -fx-background-radius: 8px;
+    -fx-border-color: rgba(74,158,221,0.2);
+    -fx-border-radius: 8px;
+}
+
+.cours-item:hover, .note-item:hover {
+    -fx-background-color: rgba(74,158,221,0.2);
+}
+
+/* ========== SÉPARATEUR ========== */
+.separator {
+    -fx-background-color: #4a9edd40;
+}
+
+/* ========== TITRES DES SECTIONS ========== */
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}

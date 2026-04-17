@@ -1,0 +1,90 @@
+/* login.css - Uniquement les interactions (hover, focus, pressed, selected) */
+
+/* ========== BOUTONS DE RÔLE ========== */
+#studentRoleButton:hover, #studentRoleButton1:hover {
+    -fx-background-color: #4a9edd40;      /* plus clair qu'au repos */
+    -fx-border-color: #4a9edd;
+   
+}
+
+#studentRoleButton:pressed, #studentRoleButton1:pressed {
+    -fx-background-color: #4a9edd80;      /* plus foncé */
+    
+}
+
+#studentRoleButton:focused, #studentRoleButton1:focused {
+    -fx-border-color: white;
+   
+}
+
+/* État sélectionné (actif) – à ajouter/retirer via Java dans le contrôleur */
+#studentRoleButton.selected, #studentRoleButton1.selected {
+    -fx-background-color: #4a9edd26;      /* déjà dans le style inline, mais on garde pour homogénéité */
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 1.5px;
+}
+
+/* ========== CHAMPS DE TEXTE ========== */
+#fieldIdentifiant:focused, #fieldPassword:focused {
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffffff1a;
+    -fx-effect: dropshadow(gaussian, rgba(58,158,255,0.5), 8, 0, 0, 0);
+}
+
+
+/* ========== BOUTON SE CONNECTER ========== */
+#btnLogin:hover {
+    -fx-background-color: #3a8ecd;
+    -fx-effect: dropshadow(gaussian, rgba(58,142,205,0.5), 8, 0, 0, 2);
+}
+
+#btnLogin:pressed {
+    -fx-background-color: #2a6eae;
+}
+
+#btnLogin:focused {
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+}
+
+/* ========== LIEN MOT DE PASSE OUBLIÉ ========== */
+#lblForgotPassword:hover {
+    -fx-text-fill: #4a9edd;
+    -fx-underline: true;
+}
+
+#lblForgotPassword:pressed {
+    -fx-text-fill: #2a6eae;
+}
+
+/* ========== BOUTON ADMIN (icône ⚙) ========== */
+#btnAdminAccess:hover {
+    -fx-background-color: #4a9edd40;
+    -fx-opacity: 0.8;
+    -fx-effect: dropshadow(gaussian, #4a9edd, 6, 0, 0, 2);
+}
+
+#btnAdminAccess:pressed {
+    -fx-background-color: #4a9edd80;
+    -fx-opacity: 1;
+}
+
+#btnAdminAccess:focused {
+    -fx-border-color: white;
+}
+
+/* ========== STYLES DES MESSAGES D'ERREUR (LoginView & AdminLoginView) ========== */
+#labelError {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e89292;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 6, 0, 0, 2);
+    -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-graphic-text-gap: 5px;
+}
+
+#labelError:visible {
+    -fx-opacity: 1;
+}
