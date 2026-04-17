@@ -1,4 +1,4 @@
-package application;
+package views;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,9 +13,9 @@ public class Main extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(@SuppressWarnings("exports") Stage primaryStage) throws Exception {
         // Charger le fichier FXML (chemin absolu depuis le classpath)
-        Parent root = FXMLLoader.load(getClass().getResource("/application/view/LoginView.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/views/view/LoginView.fxml"));
         
         // Créer la scène avec la racine chargée
         Scene scene = new Scene(root);

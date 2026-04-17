@@ -1,4 +1,4 @@
-package application.controller;
+package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,7 +41,7 @@ public class AdminLoginController {
 
         // Connexion réussie : redirection vers DashboardAdminView
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/view/DashboardAdminView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/views/view/DashboardAdminView.fxml"));
             Stage stage = (Stage) btnLogin.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Tableau de bord Administrateur");
@@ -54,7 +54,7 @@ public class AdminLoginController {
     @FXML
     private void handleReturn() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/view/LoginView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/views/view/LoginView.fxml"));
             Stage stage = (Stage) lblReturn.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("CampusConnect - Connexion");

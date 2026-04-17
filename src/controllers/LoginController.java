@@ -1,4 +1,4 @@
-package application.controller;
+package controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -76,10 +76,10 @@ public class LoginController {
             String fxml;
             String title;
             if ("etudiant".equals(selectedRole)) {
-                fxml = "/application/view/DashboardEtudiantView.fxml";
+                fxml = "/views/view/DashboardEtudiantView.fxml";
                 title = "Tableau de bord Étudiant";
             } else {
-                fxml = "/application/view/DashboardEnseignantView.fxml";
+                fxml = "/views/view/DashboardEnseignantView.fxml";
                 title = "Tableau de bord Enseignant";
             }
             Parent root = FXMLLoader.load(getClass().getResource(fxml));
@@ -106,7 +106,7 @@ public class LoginController {
     @FXML
     private void handleAdminAccess() {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/application/view/AdminLoginView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/views/view/AdminLoginView.fxml"));
             Stage stage = (Stage) btnAdminAccess.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Administration - Connexion");

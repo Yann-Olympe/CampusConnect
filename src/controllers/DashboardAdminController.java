@@ -1,4 +1,4 @@
-package application.controller;
+package controllers;
 
 public class DashboardAdminController {
 

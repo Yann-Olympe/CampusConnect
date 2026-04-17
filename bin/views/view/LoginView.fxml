@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="888.0" style="-fx-background-color: linear-gradient(from 0% 0% to 60% 100%, #0d1b2e, #1a2d4a, #0d1b2e);" stylesheets="@login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="888.0" style="-fx-background-color: linear-gradient(from 0% 0% to 60% 100%, #0d1b2e, #1a2d4a, #0d1b2e);" stylesheets="@login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
       <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0" spacing="8.0">
          <children>

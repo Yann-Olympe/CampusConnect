@@ -1,9 +1,15 @@
+
 module CampusConnect {
     requires javafx.controls;
     requires javafx.fxml;
 
-    opens application to javafx.graphics, javafx.fxml;
-    opens application.controller to javafx.fxml;
+    // Ouvre le package contenant vos contrôleurs FXML
+    opens controllers to javafx.fxml;
 
-    exports application;
+    // Si d'autres packages contiennent des FXML ou sont nécessaires :
+    opens views to javafx.fxml;
+    opens views.view to javafx.fxml;
+
+    // Exports si besoin (par ex. pour la classe Main)
+    exports views;
 }
