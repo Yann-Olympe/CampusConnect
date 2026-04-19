@@ -1,4 +1,4 @@
-package application.util;
+package views.util;
 
 public class AlertUtil {
 

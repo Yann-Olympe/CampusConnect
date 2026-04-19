@@ -1,4 +1,4 @@
-package application.data;
+package views.data;
 
 public class MockData {
 
