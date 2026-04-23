@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.InscriptionGroupesController">
+    <Label text="Inscription aux groupes" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+    <HBox spacing="15">
+        <Label text="Semestre :" /><ComboBox fx:id="semestreCombo" promptText="S1 2025-2026" />
+        <Label text="Type :" /><ComboBox fx:id="typeCombo" promptText="Tous" />
+        <Label text="Statut :" /><ComboBox fx:id="statutCombo" promptText="Ouvert" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Réinitialiser filtres" styleClass="secondary-button" />
+    </HBox>
+    <TableView fx:id="groupesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Cours" prefWidth="150" />
+            <TableColumn text="Type" prefWidth="80" />
+            <TableColumn text="Groupe" prefWidth="80" />
+            <TableColumn text="Enseignant" prefWidth="150" />
+            <TableColumn text="Places rest." prefWidth="100" />
+            <TableColumn text="Créneau" prefWidth="160" />
+            <TableColumn text="Statut" prefWidth="80" />
+            <TableColumn text="Action" prefWidth="100" />
+        </columns>
+    </TableView>
+    <HBox spacing="20">
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Détails du groupe sélectionné" styleClass="section-title" />
+            <Label fx:id="detailType" text="Type : -" />
+            <Label fx:id="detailGroupe" text="Groupe : -" />
+            <Label fx:id="detailEnseignant" text="Enseignant : -" />
+            <Label fx:id="detailPlaces" text="Places restantes : -" />
+        </VBox>
+        <VBox spacing="10" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Alertes" styleClass="section-title" />
+            <Label fx:id="alertesLabel" text="Période d'inscription bientôt terminée" />
+        </VBox>
+    </HBox>
+</VBox>

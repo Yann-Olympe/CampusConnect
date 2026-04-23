@@ -11,6 +11,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+  
 
     @Override
     public void start(@SuppressWarnings("exports") Stage primaryStage) throws Exception {

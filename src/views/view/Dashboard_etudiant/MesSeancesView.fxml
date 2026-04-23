@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="15" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MesSeancesController">
+    <Label text="Mes séances" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+    <HBox spacing="10">
+        <Label text="Filtrer par cours :" /><ComboBox fx:id="filtreCours" promptText="Tous" />
+        <Label text="Statut :" /><ComboBox fx:id="filtreStatut" promptText="Tous" />
+        <Button text="Filtrer" styleClass="primary-button" />
+        <Region HBox.hgrow="ALWAYS" />
+        <Button text="Exporter" styleClass="secondary-button" />
+    </HBox>
+    <TableView fx:id="seancesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Date" prefWidth="120" />
+            <TableColumn text="Heure début" prefWidth="100" />
+            <TableColumn text="Heure fin" prefWidth="100" />
+            <TableColumn text="Cours" prefWidth="180" />
+            <TableColumn text="Type" prefWidth="80" />
+            <TableColumn text="Groupe" prefWidth="80" />
+            <TableColumn text="Salle" prefWidth="80" />
+            <TableColumn text="Enseignant" prefWidth="150" />
+            <TableColumn text="Statut" prefWidth="100" />
+            <TableColumn text="Action" prefWidth="100" />
+        </columns>
+    </TableView>
+    <Label fx:id="paginationLabel" text="Affichage 1 à 7 sur 7 séances" style="-fx-text-fill: #64748b;" />
+</VBox>

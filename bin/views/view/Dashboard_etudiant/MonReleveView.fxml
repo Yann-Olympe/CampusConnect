@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MonReleveController">
+    <Label text="Relevé de notes - Semestre 1 (2025-2026)" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+    <TableView fx:id="releveTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Cours" prefWidth="250" />
+            <TableColumn text="Note CC" prefWidth="100" />
+            <TableColumn text="Note TP" prefWidth="100" />
+            <TableColumn text="Note Examen" prefWidth="100" />
+            <TableColumn text="Note finale" prefWidth="100" />
+            <TableColumn text="Crédits" prefWidth="80" />
+        </columns>
+    </TableView>
+    <HBox alignment="CENTER_RIGHT" spacing="15">
+        <Label text="Moyenne générale :" style="-fx-font-weight: bold;" />
+        <Label fx:id="moyenneGeneraleLabel" text="14.25" style="-fx-font-size: 20px; -fx-font-weight: bold; -fx-text-fill: #3b82f6;" />
+        <Label text="/20" />
+        <Button text="Télécharger PDF" styleClass="primary-button" />
+    </HBox>
+</VBox>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MonProfilController">
+    <Label text="Mon profil" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <HBox spacing="20">
+        <VBox spacing="15" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Informations personnelles" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="Nom :" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="nomField" text="Dupont" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="Prénom :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="prenomField" text="Jean" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Email :" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <TextField fx:id="emailField" text="jean.dupont@campusconnect.com" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label text="Téléphone :" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="telephoneField" text="+237 6XX XX XX XX" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label text="Date de naissance :" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <DatePicker fx:id="dateNaissancePicker" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                <Label text="Adresse :" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                <TextField fx:id="adresseField" text="Yaoundé, Cameroun" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+            </GridPane>
+        </VBox>
+        <VBox spacing="15" styleClass="card" HBox.hgrow="ALWAYS">
+            <Label text="Informations académiques" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+            <GridPane hgap="10" vgap="10">
+                <Label text="Matricule :" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <TextField fx:id="matriculeField" text="21INF1234" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Label text="Filière :" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <TextField fx:id="filiereField" text="Informatique" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Label text="Niveau :" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <ComboBox fx:id="niveauCombo" value="L3" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Label text="Semestre :" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <ComboBox fx:id="semestreCombo" value="S1" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                <Label text="Année académique :" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <ComboBox fx:id="anneeCombo" value="2023-2024" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            </GridPane>
+        </VBox>
+    </HBox>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Annuler" style="-fx-background-color: #94a3b8; -fx-text-fill: white;"/>
+        <Button text="Enregistrer les modifications" style="-fx-background-color: #3b82f6; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

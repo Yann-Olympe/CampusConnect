@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ParametresController">
+    <Label text="Paramètres" style="-fx-font-size: 22; -fx-font-weight: bold;"/>
+    <VBox spacing="15" styleClass="card">
+        <Label text="Préférences d'affichage" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+        <CheckBox text="Mode sombre" fx:id="darkModeCheck"/>
+        <CheckBox text="Recevoir des notifications par email" fx:id="emailNotifCheck"/>
+        <CheckBox text="Afficher les notifications dans l'application" fx:id="appNotifCheck"/>
+    </VBox>
+    <VBox spacing="15" styleClass="card">
+        <Label text="Sécurité" style="-fx-font-size: 16; -fx-font-weight: bold;"/>
+        <Button text="Changer le mot de passe" style="-fx-background-color: #3b82f6; -fx-text-fill: white;"/>
+        <Button text="Activer la double authentification" style="-fx-background-color: transparent; -fx-border-color: #3b82f6; -fx-border-radius: 20; -fx-text-fill: #3b82f6;"/>
+    </VBox>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Annuler" style="-fx-background-color: #94a3b8; -fx-text-fill: white;"/>
+        <Button text="Enregistrer" style="-fx-background-color: #3b82f6; -fx-text-fill: white;"/>
+    </HBox>
+</VBox>

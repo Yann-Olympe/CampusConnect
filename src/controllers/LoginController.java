@@ -76,7 +76,7 @@ public class LoginController {
             String fxml;
             String title;
             if ("etudiant".equals(selectedRole)) {
-                fxml = "/views/view/DashboardEtudiantView.fxml";
+                fxml = "/views/view/Dashboard_etudiant/MainView.fxml";
                 title = "Tableau de bord Étudiant";
             } else {
                 fxml = "/views/view/DashboardEnseignantView.fxml";

@@ -1,0 +1,163 @@
+/* =========================================================
+   CAMPUSCONNECT - ETUDIANT (GLOBAL LAYOUT)
+   Palette fidèle à la maquette fournie
+   ========================================================= */
+
+.root {
+    -fx-font-family:  "Segoe UI", "Georgia", sans-serif;
+    -fx-background-color: #F5F7FB;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.top-header {
+    -fx-background-color: #F8FAFD;
+    -fx-border-color: transparent transparent #D7E3F3 transparent;
+    -fx-border-width: 0 0 1 0;
+}
+
+.page-title {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.user-name {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.user-role {
+    -fx-text-fill: #5F6F8E;
+    -fx-font-size: 11px;
+}
+
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #5F6F8E;
+    -fx-font-size: 14px;
+    -fx-background-radius: 10px;
+    -fx-padding: 6 10 6 10;
+    -fx-cursor: hand;
+}
+
+.icon-button:hover {
+    -fx-background-color: #EAF3FF;
+    -fx-text-fill: #1E63D5;
+}
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    -fx-background-color: #0B3B78;
+    -fx-border-color: transparent;
+    -fx-background-radius: 0 18px 18px 0;
+    -fx-border-radius: 0 18px 18px 0;
+}
+
+.logo-icon {
+    -fx-font-size: 18px;
+    -fx-text-fill: white;
+}
+
+.logo-text {
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-separator {
+    -fx-opacity: 0.18;
+}
+
+.sidebar-profile-card {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 8px;
+}
+
+.sidebar-user-name {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-user-info {
+    -fx-text-fill: #D7E6FF;
+    -fx-font-size: 11px;
+}
+
+/* =========================================================
+   MENU BUTTONS
+   ========================================================= */
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #EAF3FF;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.menu-button:hover {
+    -fx-background-color: #154A91;
+    -fx-text-fill: white;
+}
+
+.active-menu {
+    -fx-background-color: #1E63D5;
+    -fx-text-fill: white;
+}
+
+.logout-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #EAF3FF;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 14 10 14;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+}
+
+.logout-button:hover {
+    -fx-background-color: #154A91;
+    -fx-text-fill: white;
+}
+
+/* =========================================================
+   CONTENT AREA
+   ========================================================= */
+
+.content-container {
+    -fx-background-color: #F5F7FB;
+}
+
+/* =========================================================
+   PLACEHOLDER
+   ========================================================= */
+
+.placeholder-view {
+    -fx-background-color: #F5F7FB;
+}
+
+.placeholder-label {
+    -fx-text-fill: #5F6F8E;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-color: white;
+    -fx-padding: 24 32 24 32;
+    -fx-background-radius: 14px;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 14px;
+}

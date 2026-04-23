@@ -1,158 +1,90 @@
-/* login.css - Styles pour la page de connexion (étudiant/enseignant) */
+/* login.css - Uniquement les interactions (hover, focus, pressed, selected) */
 
-/* ========== ROOT & GLOBAL ========== */
-.root, .login-root {
-    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0d1b2e 0%, #1a2d4a 50%, #0d1b2e 100%);
+/* ========== BOUTONS DE RÔLE ========== */
+#studentRoleButton:hover, #studentRoleButton1:hover {
+    -fx-background-color: #4a9edd40;      /* plus clair qu'au repos */
+    -fx-border-color: #4a9edd;
+   
 }
 
-/* ========== CARTE DE CONNEXION ========== */
-.card {
-    -fx-background-color: rgba(255,255,255,0.05);
-    -fx-border-color: rgba(74,158,221,0.3);
-    -fx-border-width: 0.5px;
-    -fx-border-radius: 16px;
-    -fx-background-radius: 16px;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 10, 0, 0, 2);
+#studentRoleButton:pressed, #studentRoleButton1:pressed {
+    -fx-background-color: #4a9edd80;      /* plus foncé */
+    
 }
 
-/* ========== BOUTONS DE RÔLE (Étudiant / Enseignant) ========== */
-.role-button {
-    -fx-padding: 12px 8px;
-    -fx-border-radius: 10px;
-    -fx-background-radius: 10px;
-    -fx-cursor: hand;
-    -fx-text-fill: #a0b8d0;
-    -fx-font-size: 13px;
-    -fx-font-weight: 500;
-    -fx-alignment: center;
-    -fx-wrap-text: true;
-    -fx-background-color: rgba(255,255,255,0.03);
-    -fx-border-color: rgba(74,158,221,0.25);
+#studentRoleButton:focused, #studentRoleButton1:focused {
+    -fx-border-color: white;
+   
+}
+
+/* État sélectionné (actif) – à ajouter/retirer via Java dans le contrôleur */
+#studentRoleButton.selected, #studentRoleButton1.selected {
+    -fx-background-color: #4a9edd26;      /* déjà dans le style inline, mais on garde pour homogénéité */
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 1.5px;
+}
+
+/* ========== CHAMPS DE TEXTE ========== */
+#fieldIdentifiant:focused, #fieldPassword:focused {
+    -fx-border-color: #4a9edd;
+    -fx-border-width: 2px;
+    -fx-background-color: #ffffff1a;
+    -fx-effect: dropshadow(gaussian, rgba(58,158,255,0.5), 8, 0, 0, 0);
+}
+
+
+/* ========== BOUTON SE CONNECTER ========== */
+#btnLogin:hover {
+    -fx-background-color: #3a8ecd;
+    -fx-effect: dropshadow(gaussian, rgba(58,142,205,0.5), 8, 0, 0, 2);
+}
+
+#btnLogin:pressed {
+    -fx-background-color: #2a6eae;
+}
+
+#btnLogin:focused {
+    -fx-border-color: white;
     -fx-border-width: 1px;
 }
 
-/* État sélectionné (actif) */
-.role-button:selected {
-    -fx-background-color: rgba(74,158,221,0.15);
-    -fx-border-color: #4a9edd;
-    -fx-border-width: 1.5px;
-    -fx-text-fill: #e8f0f8;
-}
-
-/* Survol */
-.role-button:hover {
-    -fx-background-color: rgba(74,158,221,0.25);
-    -fx-border-color: #4a9edd;
-}
-
-/* Clic (pressé) */
-.role-button:pressed {
-    -fx-background-color: rgba(74,158,221,0.4);
-}
-
-/* Icônes SVG à l'intérieur des boutons */
-.role-button SVGPath {
-    -fx-stroke: #6a8aaa;
-    -fx-stroke-width: 1.8;
-    -fx-fill: none;
-    -fx-scale-x: 1.2;
-    -fx-scale-y: 1.2;
-}
-
-.role-button:selected SVGPath {
-    -fx-stroke: #4a9edd;
-}
-
-.role-button:hover SVGPath {
-    -fx-stroke: #4a9edd;
-}
-
-/* ========== CHAMPS DE TEXTE (Identifiant & Mot de passe) ========== */
-.input-field {
-    -fx-background-color: rgba(255,255,255,0.06);
-    -fx-border-color: rgba(74,158,221,0.25);
-    -fx-border-radius: 8px;
-    -fx-background-radius: 8px;
-    -fx-text-fill: #e8f0f8;
-    -fx-prompt-text-fill: #4a6a88;
-    -fx-font-size: 14px;
-    -fx-padding: 10px 12px;
-}
-
-/* Focus : bordure plus prononcée */
-.input-field:focused {
-    -fx-border-color: #4a9edd;
-    -fx-border-width: 1.5px;
-    -fx-background-color: rgba(255,255,255,0.1);
-    -fx-effect: dropshadow(gaussian, rgba(74,158,221,0.3), 6, 0, 0, 0);
-}
-
-/* ========== BOUTON DE CONNEXION ========== */
-.login-button {
-    -fx-background-color: #4a9edd;
-    -fx-background-radius: 8px;
-    -fx-text-fill: white;
-    -fx-font-size: 15px;
-    -fx-font-weight: bold;
-    -fx-padding: 12px;
-    -fx-cursor: hand;
-    -fx-letter-spacing: 0.5px;
-}
-
-.login-button:hover {
-    -fx-background-color: #3a8ecd;
-}
-
-.login-button:pressed {
-    -fx-background-color: #2a6eae;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 1);
-}
-
-/* ========== LIEN "MOT DE PASSE OUBLIÉ ?" ========== */
-.forgot-link {
-    -fx-text-fill: #6a8aaa;
-    -fx-font-size: 12px;
-    -fx-cursor: hand;
-    -fx-alignment: center;
-}
-
-.forgot-link:hover {
+/* ========== LIEN MOT DE PASSE OUBLIÉ ========== */
+#lblForgotPassword:hover {
     -fx-text-fill: #4a9edd;
     -fx-underline: true;
 }
 
-/* ========== BOUTON ADMIN (icône en bas à droite) ========== */
-.admin-trigger {
-    -fx-cursor: hand;
-    -fx-opacity: 0.7;
+#lblForgotPassword:pressed {
+    -fx-text-fill: #2a6eae;
 }
 
-.admin-trigger:hover {
+/* ========== BOUTON ADMIN (icône ⚙) ========== */
+#btnAdminAccess:hover {
+    -fx-background-color: #4a9edd40;
+    -fx-opacity: 0.8;
+    -fx-effect: dropshadow(gaussian, #4a9edd, 6, 0, 0, 2);
+}
+
+#btnAdminAccess:pressed {
+    -fx-background-color: #4a9edd80;
     -fx-opacity: 1;
 }
 
-.admin-icon {
-    -fx-background-color: rgba(74,158,221,0.1);
-    -fx-border-color: #4a9edd;
-    -fx-border-width: 1.5px;
-    -fx-border-radius: 22px;
-    -fx-background-radius: 22px;
+#btnAdminAccess:focused {
+    -fx-border-color: white;
 }
 
-.admin-icon:hover {
-    -fx-background-color: rgba(74,158,221,0.25);
-}
-
-/* ========== STYLES GÉNÉRAUX POUR LES LABELS ========== */
-.label-title {
-    -fx-font-size: 12px;
-    -fx-text-fill: #a0b8d0;
-    -fx-letter-spacing: 0.5px;
-}
-
-/* ========== ZONE D'ERREUR ========== */
-.error-label {
-    -fx-font-size: 12px;
-    -fx-text-fill: #e74c3c;
+/* ========== STYLES DES MESSAGES D'ERREUR (LoginView & AdminLoginView) ========== */
+#labelError {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e89292;
+    -fx-effect: dropshadow(gaussian, rgba(231, 76, 60, 0.5), 6, 0, 0, 2);
     -fx-wrap-text: true;
+    -fx-alignment: center;
+    -fx-graphic-text-gap: 5px;
+}
+
+#labelError:visible {
+    -fx-opacity: 1;
 }

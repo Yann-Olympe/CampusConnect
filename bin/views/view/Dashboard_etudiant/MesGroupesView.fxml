@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MesGroupesController">
+    <Label text="Mes groupes" style="-fx-font-size: 22px; -fx-font-weight: bold;" />
+    <TableView fx:id="groupesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn text="Cours" prefWidth="180" />
+            <TableColumn text="Type" prefWidth="80" />
+            <TableColumn text="Groupe" prefWidth="100" />
+            <TableColumn text="Enseignant" prefWidth="180" />
+            <TableColumn text="Salle" prefWidth="100" />
+            <TableColumn text="Créneau" prefWidth="160" />
+        </columns>
+    </TableView>
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Se désinscrire" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-background-radius: 20;" />
+        <Button text="Voir planning du groupe" styleClass="primary-button" />
+    </HBox>
+</VBox>
