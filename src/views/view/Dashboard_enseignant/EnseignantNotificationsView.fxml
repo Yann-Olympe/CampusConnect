@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Controllers_enseignant.EnseignantNotificationsController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_enseignant.css">
+
+    <children>
+        <HBox alignment="CENTER_LEFT">
+            <children>
+                <Label text="Notifications" styleClass="page-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Tout marquer comme lu" styleClass="secondary-btn"/>
+            </children>
+        </HBox>
+
+        <VBox spacing="15.0" styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+            <children>
+                <Label text="• Nouvelle séance ajoutée pour INFO-301 (TD2)" styleClass="list-item"/>
+                <Label text="• Salle modifiée pour INFO-302 (TP2)" styleClass="list-item"/>
+                <Label text="• Conflit détecté sur le créneau du mardi 10h-12h" styleClass="list-item-warning"/>
+                <Label text="• 23 notes en attente de saisie" styleClass="list-item-warning"/>
+                <Label text="• Évaluation CC2 de INFO-301 à clôturer" styleClass="list-item"/>
+                <Label text="• Groupe TD1 complet" styleClass="list-item"/>
+            </children>
+        </VBox>
+    </children>
+</VBox>

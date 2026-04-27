@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Controllers_enseignant.EnseignantProfilController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_enseignant.css">
+
+    <children>
+
+        <Label text="Mon profil" styleClass="page-title"/>
+
+        <HBox spacing="20.0" styleClass="card">
+            <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+            <children>
+                <Label text="KT" styleClass="profile-avatar"/>
+
+                <VBox spacing="6.0">
+                    <children>
+                        <Label text="Kevin Tchoumi" styleClass="page-title"/>
+                        <Label text="Enseignant • Département Informatique" styleClass="page-subtitle"/>
+                    </children>
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS"/>
+
+                <VBox spacing="10.0">
+                    <children>
+                        <Button text="Modifier le profil" styleClass="primary-btn"/>
+                        <Button text="Changer le mot de passe" styleClass="secondary-btn"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+        <VBox spacing="15.0" styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+            <children>
+                <Label text="Informations personnelles" styleClass="section-title"/>
+
+                <GridPane hgap="20.0" vgap="16.0">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="25.0"/>
+                        <ColumnConstraints percentWidth="25.0"/>
+                        <ColumnConstraints percentWidth="25.0"/>
+                        <ColumnConstraints percentWidth="25.0"/>
+                    </columnConstraints>
+
+                    <children>
+                        <VBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="5.0">
+                            <Label text="Nom" styleClass="info-label"/>
+                            <Label fx:id="nomLabel" text="Tchoumi" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="0" spacing="5.0">
+                            <Label text="Prénom" styleClass="info-label"/>
+                            <Label fx:id="prenomLabel" text="Kevin" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="0" spacing="5.0">
+                            <Label text="Email" styleClass="info-label"/>
+                            <Label fx:id="emailLabel" text="kevin.tchoumi@campusconnect.cm" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="3" GridPane.rowIndex="0" spacing="5.0">
+                            <Label text="Statut" styleClass="info-label"/>
+                            <Label fx:id="statutLabel" text="Permanent" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="0" GridPane.rowIndex="1" spacing="5.0">
+                            <Label text="Département" styleClass="info-label"/>
+                            <Label fx:id="departementLabel" text="Informatique" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="1" GridPane.rowIndex="1" spacing="5.0">
+                            <Label text="Date de naissance" styleClass="info-label"/>
+                            <Label fx:id="dateNaissanceLabel" text="12/06/1987" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="2" GridPane.rowIndex="1" spacing="5.0">
+                            <Label text="Identifiant" styleClass="info-label"/>
+                            <Label fx:id="identifiantLabel" text="ENS-0042" styleClass="info-value"/>
+                        </VBox>
+
+                        <VBox GridPane.columnIndex="3" GridPane.rowIndex="1" spacing="5.0">
+                            <Label text="Cours actifs" styleClass="info-label"/>
+                            <Label fx:id="coursActifsLabel" text="6" styleClass="info-value"/>
+                        </VBox>
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+
+    </children>
+</VBox>

@@ -36,17 +36,17 @@
 }
 
 .icon-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #5F6F8E;
+   -fx-background-color: #EAF3FF;
+    -fx-text-fill: #1E63D5;
     -fx-font-size: 14px;
+    -fx-font-weight: bold;
     -fx-background-radius: 10px;
     -fx-padding: 6 10 6 10;
     -fx-cursor: hand;
 }
 
 .icon-button:hover {
-    -fx-background-color: #EAF3FF;
-    -fx-text-fill: #1E63D5;
+   -fx-font-size: 15px;
 }
 
 /* =========================================================
@@ -54,10 +54,8 @@
    ========================================================= */
 
 .sidebar {
-    -fx-background-color: #0B3B78;
-    -fx-border-color: transparent;
-    -fx-background-radius: 0 18px 18px 0;
-    -fx-border-radius: 0 18px 18px 0;
+    -fx-background-color:  linear-gradient(from 100.0% 0.0% to 74.6212% 44.3182%, #bec8cc 0.0%, #0b3b78 100.0%);
+   
 }
 
 .logo-icon {
@@ -118,21 +116,9 @@
     -fx-text-fill: white;
 }
 
-.logout-button {
-    -fx-background-color: transparent;
-    -fx-text-fill: #EAF3FF;
-    -fx-font-size: 13px;
-    -fx-font-weight: 600;
-    -fx-alignment: CENTER_LEFT;
-    -fx-padding: 10 14 10 14;
-    -fx-background-radius: 8px;
-    -fx-border-radius: 8px;
-    -fx-cursor: hand;
-}
 
 .logout-button:hover {
-    -fx-background-color: #154A91;
-    -fx-text-fill: white;
+    -fx-font-size: 13px;
 }
 
 /* =========================================================
@@ -160,4 +146,44 @@
     -fx-background-radius: 14px;
     -fx-border-color: #D7E3F3;
     -fx-border-radius: 14px;
+}
+
+/* ===== STYLES POUR INSCRIPTION GROUPES ===== */
+.detail-card {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 12;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.03), 4, 0, 0, 1);
+}
+
+.alert-card {
+    -fx-background-color: #FFF8E7;
+    -fx-border-color: #F1B27A;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+}
+
+/* Tableau */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 12;
+}
+.table-view .column-header-background {
+    -fx-background-color: #F8FAFD;
+    -fx-background-radius: 12 12 0 0;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-weight: bold;
+}
+.table-row-cell:selected {
+    -fx-background-color: #EAF3FF;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #1E63D5;
 }

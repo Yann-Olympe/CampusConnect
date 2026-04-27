@@ -8,14 +8,17 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 
-<ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;" stylesheets="@dashboard_views.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MesCoursController">
+<ScrollPane fitToHeight="true" fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent;" stylesheets="@dashboard_views.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_etudiant.MesCoursController">
     <VBox alignment="CENTER" spacing="20" VBox.vgrow="ALWAYS">
         <padding>
             <Insets bottom="20" left="30" right="30" top="20" />
         </padding>
 
-        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1e293b;" text="📚 Mes cours" />
+        <Label style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #1E63D5;" text="📚 Grille des programmes et des contenues de la filière" />
 
         <!-- TableView responsive : prend toute la largeur disponible -->
         <TableView fx:id="coursTable" style="-fx-pref-width: 0; -fx-max-width: Infinity; -fx-min-width: 300;" VBox.vgrow="ALWAYS">
@@ -23,18 +26,34 @@
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
             </columnResizePolicy>
             <columns>
-                <TableColumn fx:id="colCode" text="CODE" />
+                <TableColumn fx:id="colCode" style="-fx-font-weight: bold;" text="CODE" />
                 <TableColumn fx:id="colIntitule" text="INTITULÉ" />
                 <TableColumn fx:id="colDescription" text="DESCRIPTION" />
                 <TableColumn fx:id="colHeures" text="HEURES" />
-            <TableColumn prefWidth="75.0" text="ENSEIGNANT" />
+            <TableColumn fx:id="colEnseignant" prefWidth="75.0" text="ENSEIGNANT" />
             </columns>
         </TableView>
 
         <!-- Ligne de statut facultative -->
         <HBox alignment="CENTER_RIGHT" spacing="10">
             <Region HBox.hgrow="ALWAYS" />
-            <Label fx:id="statusLabel" style="-fx-text-fill: #64748b;" text="6 cours chargés" />
+            <Label fx:id="statusLabel" style="-fx-text-fill: #64748b;" text="6 cours chargés">
+            <textFill>
+               <LinearGradient endX="1.0" endY="1.0">
+                  <stops>
+                     <Stop>
+                        <color>
+                           <Color red="0.7450980544090271" green="0.7843137383460999" blue="0.800000011920929" />
+                        </color>
+                     </Stop>
+                     <Stop offset="1.0">
+                        <color>
+                           <Color red="1.0" green="1.0" blue="1.0" />
+                        </color>
+                     </Stop>
+                  </stops>
+               </LinearGradient>
+            </textFill></Label>
         </HBox>
     </VBox>
 </ScrollPane>

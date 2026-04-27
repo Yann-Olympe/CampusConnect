@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<ScrollPane fitToWidth="true" prefHeight="1498.0" prefWidth="1145.0" styleClass="content-scroll" stylesheets="@dashboard_views.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardViewController">
+<ScrollPane fitToWidth="true" prefHeight="1498.0" prefWidth="1145.0" styleClass="content-scroll" stylesheets="@dashboard_views.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_etudiant.DashboardViewController">
 
     <content>
         <VBox prefHeight="1186.0" prefWidth="1127.0" spacing="20.0" styleClass="content-area">

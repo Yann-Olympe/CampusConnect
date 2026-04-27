@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1500.0" styleClass="root-esg" stylesheets="@../../css/dashboard_enseignant.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_enseignant.MainEsgController">
+
+    <!-- SIDEBAR -->
+    <VBox prefWidth="250.0" spacing="8.0" styleClass="sidebar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="20.0" left="15.0" right="15.0" top="25.0" />
+        </padding>
+        <children>
+         <ImageView fitHeight="150.0" fitWidth="200.0" opacity="0.94" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../Logos/Applogo.jpg" />
+            </image>
+         </ImageView>
+            <Separator />
+            <Button fx:id="btnDashboard" maxWidth="Infinity" onAction="#showDashboard" prefHeight="40.0" styleClass="nav-btn-active" text="Tableau de bord" />
+            <Button fx:id="btnCours" maxWidth="Infinity" onAction="#showCours" prefHeight="40.0" styleClass="nav-btn" text="Mes cours" />
+            <Button fx:id="btnGroupes" maxWidth="Infinity" onAction="#showGroupes" prefHeight="40.0" styleClass="nav-btn" text="Mes groupes" />
+            <Button fx:id="btnEtudiants" maxWidth="Infinity" onAction="#showEtudiants" prefHeight="40.0" styleClass="nav-btn" text="Mes étudiants" />
+            <Button fx:id="btnPlanning" maxWidth="Infinity" onAction="#showPlanning" prefHeight="40.0" styleClass="nav-btn" text="Planning" />
+            <Button fx:id="btnSaisieNotes" maxWidth="Infinity" onAction="#showSaisieNotes" prefHeight="40.0" styleClass="nav-btn" text="Saisie des notes" />
+            <Button fx:id="btnNotesEnregistrees" maxWidth="Infinity" onAction="#showNotesEnregistrees" prefHeight="40.0" styleClass="nav-btn" text="Notes enregistrées" />
+            <Button fx:id="btnMoyennes" maxWidth="Infinity" onAction="#showMoyennes" prefHeight="40.0" styleClass="nav-btn" text="Résultats / Moyennes" />
+            <Button fx:id="btnNotifications" maxWidth="Infinity" onAction="#showNotifications" prefHeight="40.0" styleClass="nav-btn" text="Notifications" />
+            <Button fx:id="btnProfil" maxWidth="Infinity" onAction="#showProfil" prefHeight="40.0" styleClass="nav-btn" text="Mon profil" />
+            <Region VBox.vgrow="ALWAYS" />
+            <Button fx:id="btnLogout" maxWidth="Infinity" onAction="#logout" prefHeight="40.0" styleClass="nav-btn-danger" text="Déconnexion" />
+        </children>
+    </VBox>
+
+    <!-- MAIN AREA -->
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <padding>
+            <Insets bottom="20.0" left="25.0" right="25.0" top="20.0" />
+        </padding>
+        <children>
+            <!-- TOPBAR -->
+            <HBox alignment="CENTER_LEFT" spacing="15.0" styleClass="topbar">
+                <padding>
+                    <Insets bottom="15.0" left="20.0" right="20.0" top="15.0" />
+                </padding>
+                <children>
+                    <VBox spacing="3.0">
+                        <Label fx:id="pageTitleLabel" styleClass="page-title" text="Espace enseignant" />
+                        <Label fx:id="topSubtitleLabel" styleClass="page-subtitle" text="Gestion de vos cours, groupes, notes et planning" />
+                    </VBox>
+                    <Region HBox.hgrow="ALWAYS" />
+                    <Button styleClass="icon-btn" text="🔔" />
+                    <Label styleClass="avatar-circle" text="KT" />
+                    <VBox spacing="2.0">
+                        <Label fx:id="enseignantNameLabel" styleClass="top-user-name" text="Kevin Tchoumi" />
+                        <Label fx:id="enseignantRoleLabel" styleClass="top-user-role" text="Enseignant" />
+                    </VBox>
+                </children>
+            </HBox>
+
+            <!-- DYNAMIC CONTENT -->
+            <StackPane fx:id="contentArea" styleClass="content-root" VBox.vgrow="ALWAYS" />
+        </children>
+    </VBox>
+</AnchorPane>

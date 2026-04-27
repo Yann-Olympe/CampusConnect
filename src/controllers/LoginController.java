@@ -79,7 +79,7 @@ public class LoginController {
                 fxml = "/views/view/Dashboard_etudiant/MainView.fxml";
                 title = "Tableau de bord Étudiant";
             } else {
-                fxml = "/views/view/DashboardEnseignantView.fxml";
+                fxml = "/views/view/Dashboard_enseignant/Main_esgView.fxml";
                 title = "Tableau de bord Enseignant";
             }
             Parent root = FXMLLoader.load(getClass().getResource(fxml));

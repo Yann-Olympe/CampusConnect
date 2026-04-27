@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Controllers_enseignant.EnseignantMoyennesController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_enseignant.css">
+
+    <children>
+
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <Label text="Résultats / Moyennes" styleClass="page-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Button text="Exporter PDF" styleClass="secondary-btn"/>
+                <Button text="Exporter Excel" styleClass="secondary-btn"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="15.0">
+            <children>
+                <VBox prefWidth="240.0" spacing="8.0" styleClass="kpi-card-success">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Moyenne du groupe" styleClass="kpi-label"/>
+                        <Label text="13.80 / 20" styleClass="kpi-value-success"/>
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="240.0" spacing="8.0" styleClass="kpi-card">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Meilleure note" styleClass="kpi-label"/>
+                        <Label text="19.00 / 20" styleClass="kpi-value"/>
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="240.0" spacing="8.0" styleClass="kpi-card-danger">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Plus faible note" styleClass="kpi-label"/>
+                        <Label text="6.00 / 20" styleClass="kpi-value-danger"/>
+                    </children>
+                </VBox>
+
+                <VBox prefWidth="240.0" spacing="8.0" styleClass="kpi-card-success">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Taux de réussite" styleClass="kpi-label"/>
+                        <Label text="78%" styleClass="kpi-value-success"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <ComboBox promptText="Cours" styleClass="custom-combo" prefWidth="220.0"/>
+                <ComboBox promptText="Groupe" styleClass="custom-combo" prefWidth="180.0"/>
+                <ComboBox promptText="Évaluation" styleClass="custom-combo" prefWidth="220.0"/>
+                <Region HBox.hgrow="ALWAYS"/>
+            </children>
+        </HBox>
+
+        <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox spacing="12.0" styleClass="card" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Classement des étudiants" styleClass="section-title"/>
+                        <TableView fx:id="classementTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                            <columns>
+                                <TableColumn fx:id="colRang" text="Rang" prefWidth="80.0"/>
+                                <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="150.0"/>
+                                <TableColumn fx:id="colNom" text="Nom" prefWidth="140.0"/>
+                                <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="140.0"/>
+                                <TableColumn fx:id="colMoyenne" text="Moyenne" prefWidth="120.0"/>
+                                <TableColumn fx:id="colAppreciation" text="Appréciation" prefWidth="160.0"/>
+                            </columns>
+                        </TableView>
+                    </children>
+                </VBox>
+
+                <VBox spacing="10.0" prefWidth="320.0" styleClass="card">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Actions" styleClass="section-title"/>
+                        <Button text="Voir détail des notes" styleClass="primary-btn" maxWidth="Infinity"/>
+                        <Button text="Exporter PDF" styleClass="secondary-btn" maxWidth="Infinity"/>
+                        <Button text="Exporter Excel" styleClass="secondary-btn" maxWidth="Infinity"/>
+                        <Label text="Répartition des notes (graphique à intégrer plus tard)" styleClass="placeholder-text"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+
+    </children>
+</VBox>

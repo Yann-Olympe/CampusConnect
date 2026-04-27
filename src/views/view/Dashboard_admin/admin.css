@@ -1,0 +1,79 @@
+/* ========== SIDEBAR ADMIN ========== */
+.sidebar-admin {
+    -fx-background-color: #0f172a;
+}
+.sidebar-profile-admin {
+    -fx-background-color: #1e293b;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px;
+}
+.sidebar-user-name-admin {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.sidebar-user-info-admin {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+}
+.menu-button-admin {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cbd5e1;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 15;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+}
+.menu-button-admin:hover {
+    -fx-background-color: #334155;
+}
+.active-menu-admin {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+}
+.logout-button-admin {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10;
+    -fx-cursor: hand;
+}
+/* ========== ZONE CENTRALE ========== */
+.content-container-admin {
+    -fx-background-color: #f1f5f9;
+}
+.page-title-admin {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+/* ========== KPI CARTES ========== */
+.kpi-card-admin {
+    -fx-background-color: white;
+    -fx-background-radius: 12px;
+    -fx-padding: 15px;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 1);
+}
+.kpi-title-admin {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 14px;
+}
+.kpi-value-admin {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+.kpi-subtitle-admin {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+}
+/* ========== GRAPHIQUES ========== */
+.stats-card-admin {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-padding: 15px;
+}
+.section-title-admin {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}

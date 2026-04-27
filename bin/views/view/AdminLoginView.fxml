@@ -83,9 +83,9 @@
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <ImageView fitHeight="141.0" fitWidth="121.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="141.0" fitWidth="121.0" layoutX="14.0" layoutY="14.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../Logos/AZ2nQHmI3qeaBg5MU1W38w-AZ2nQHmI4cAFE-tPbsCQRQ.jpg" />
+            <Image url="@../Logos/Applogo.jpg" />
          </image>
       </ImageView>
    </children>

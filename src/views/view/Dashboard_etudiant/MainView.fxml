@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="920.0" prefWidth="1371.0" stylesheets="@dashboard_etd.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DashboardEtudiantController">
+<BorderPane prefHeight="920.0" prefWidth="1371.0" stylesheets="@dashboard_etd.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_etudiant.DashboardEtudiantController">
    <top>
       <HBox alignment="CENTER_LEFT" prefHeight="71.0" prefWidth="1111.0" spacing="15.0" style="-fx-background-color: #a7c1d41f;" styleClass="top-header">
          <padding>
@@ -27,7 +27,7 @@
                </font>
             </Label>
             <Region HBox.hgrow="ALWAYS" />
-            <Button fx:id="searchButton" styleClass="icon-button" text="🔍" />
+            <Button fx:id="searchButton" styleClass="icon-button" text="🔍" textFill="RED" />
             <Button fx:id="notificationButton" styleClass="icon-button" text="🔔" />
             <ImageView fitHeight="40.0" fitWidth="40.0" preserveRatio="true" />
             <VBox spacing="2.0">
@@ -45,13 +45,14 @@
             <Insets bottom="20.0" left="16.0" right="16.0" top="20.0" />
          </padding>
          <children>
-            <ImageView fitHeight="136.0" fitWidth="161.0" pickOnBounds="true" preserveRatio="true">
-                <Image url="@../../Logos/AZ22PzqKhvdl1TqCZ_vL6g-AZ22PzqK5LQLsQN2PbFajA.jpg" />
+            <ImageView fitHeight="136.0" fitWidth="182.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Logos/Applogo.jpg" />
+               </image>
             </ImageView>
             <Separator styleClass="sidebar-separator" />
             <VBox alignment="CENTER" spacing="5.0" styleClass="sidebar-profile-card">
                <children>
-                  <ImageView fitHeight="72.0" fitWidth="72.0" preserveRatio="true" />
                   <Label fx:id="sidebarStudentNameLabel" styleClass="sidebar-user-name" text="Kurain Nagal">
                      <font>
                         <Font name="Georgia" size="12.0" />
@@ -66,28 +67,25 @@
                </children>
             </VBox>
             <Separator styleClass="sidebar-separator" />
-
-            <!-- Zone déroulante pour les boutons -->
-            <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;">
+            <ScrollPane fitToWidth="true" style="-fx-background: transparent; -fx-background-color: transparent; -fx-border-color: transparent;" VBox.vgrow="ALWAYS">
                <content>
                   <VBox spacing="5.0">
-                     <Button fx:id="btnDashboard" maxWidth="Infinity" onAction="#showDashboardView" style="-fx-background-color: #75c9ec30;" styleClass="menu-button active-menu" text="Tableau de bord" textFill="WHITE" />
-                     <Button fx:id="btnMesCours" maxWidth="Infinity" onAction="#showMesCoursPlaceholder" styleClass="menu-button" text="Mes cours" />
-                     <Button fx:id="btnInscriptionGroupes" maxWidth="Infinity" onAction="#showInscriptionGroupesView" styleClass="menu-button" text="Inscription aux groupes" />
-                     <Button fx:id="btnMesGroupes" maxWidth="Infinity" onAction="#showMesGroupesPlaceholder" styleClass="menu-button" text="Mes groupes" />
-                     <Button fx:id="btnPlanning" maxWidth="Infinity" onAction="#showPlanningView" styleClass="menu-button" text="Mon planning" />
-                     <Button fx:id="btnMesSeances" maxWidth="Infinity" onAction="#showMesSeancesPlaceholder" styleClass="menu-button" text="Mes séances" />
-                     <Button fx:id="btnMesNotes" maxWidth="Infinity" onAction="#showMesNotesPlaceholder" styleClass="menu-button" text="Mes notes" />
-                     <Button fx:id="btnMonReleve" maxWidth="Infinity" onAction="#showMonRelevePlaceholder" styleClass="menu-button" text="Mon relevé" />
-                     <Button fx:id="btnNotifications" maxWidth="Infinity" onAction="#showNotificationsPlaceholder" styleClass="menu-button" text="Notifications" />
-                     <Button fx:id="btnMonProfil" maxWidth="Infinity" onAction="#showMonProfilPlaceholder" styleClass="menu-button" text="Mon profil" />
-                     <Button fx:id="btnParametres" maxWidth="Infinity" onAction="#showParametresPlaceholder" styleClass="menu-button" text="Paramètres" />
+                     <children>
+                        <Button fx:id="btnDashboard" maxWidth="Infinity" onAction="#showDashboardView" style="-fx-background-color: #75c9ec30;" styleClass="menu-button active-menu" text="Tableau de bord" textFill="WHITE" />
+                        <Button fx:id="btnMesCours" maxWidth="Infinity" onAction="#showMesCoursPlaceholder" styleClass="menu-button" text="Mes cours" />
+                        <Button fx:id="btnInscriptionGroupes" maxWidth="Infinity" onAction="#showInscriptionGroupesView" styleClass="menu-button" text="Inscription aux groupes" />
+                        <Button fx:id="btnMesGroupes" maxWidth="Infinity" onAction="#showMesGroupesPlaceholder" styleClass="menu-button" text="Mes groupes" />
+                        <Button fx:id="btnPlanning" maxWidth="Infinity" onAction="#showPlanningView" styleClass="menu-button" text="Mon planning" />
+                        <Button fx:id="btnMesSeances" maxWidth="Infinity" onAction="#showMesSeancesPlaceholder" styleClass="menu-button" text="Mes séances" />
+                        <Button fx:id="btnMesNotes" maxWidth="Infinity" onAction="#showMesNotesPlaceholder" styleClass="menu-button" text="Mes notes" />
+                        <Button fx:id="btnMonReleve" maxWidth="Infinity" onAction="#showMonRelevePlaceholder" styleClass="menu-button" text="Mon relevé" />
+                        <Button fx:id="btnNotifications" maxWidth="Infinity" onAction="#showNotificationsPlaceholder" styleClass="menu-button" text="Notifications" />
+                        <Button fx:id="btnMonProfil" maxWidth="Infinity" onAction="#showMonProfilPlaceholder" styleClass="menu-button" text="Mon profil" />
+                     </children>
                   </VBox>
                </content>
             </ScrollPane>
-
-            <!-- Bouton déconnexion toujours visible en bas -->
-            <Button fx:id="btnLogout" maxWidth="Infinity" onAction="#handleLogout" styleClass="logout-button" text="Déconnexion" textFill="#e40e0e" />
+            <Button fx:id="btnLogout" maxWidth="Infinity" onAction="#handleLogout" prefHeight="38.0" prefWidth="154.0" style="-fx-background-color: radial-gradient(focus-angle 0.0deg, focus-distance 0.0% , center 51.3274% 51.1364%, radius 80.2752%, #048bfa 0.0%, #e01919b8 100.0%); -fx-background-radius: 12px; -fx-border-radius: 12px; -fx-font-weight: bold;" styleClass="logout-button" text="  Déconnexion" textAlignment="CENTER" textFill="#ffffffb8" />
          </children>
       </VBox>
    </left>

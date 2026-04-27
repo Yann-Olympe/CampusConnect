@@ -1,0 +1,106 @@
+/* ========== SIDEBAR ========== */
+.sidebar-ens {
+    -fx-background-radius: 0 20 20 0;
+}
+.sidebar-separator-ens {
+    -fx-opacity: 0.3;
+}
+.sidebar-profile-ens {
+    -fx-padding: 15;
+}
+.menu-button-ens {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cbd5e1;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 10 15;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+.menu-button-ens:hover {
+    -fx-background-color: #334155;
+}
+.logout-button-ens {
+    -fx-background-radius: 8;
+    -fx-padding: 8;
+    -fx-cursor: hand;
+    -fx-font-weight: bold;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+.content-container-ens {
+    -fx-background-color: #f1f5f9;
+}
+.page-title-ens {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+.user-name-ens, .user-role-ens {
+    -fx-text-fill: #f1f5f9;
+}
+.icon-button-ens {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cbd5e1;
+    -fx-cursor: hand;
+}
+
+/* ========== KPI CARDS ========== */
+.kpi-card-ens {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-padding: 15;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 4, 0, 0, 1);
+}
+.kpi-title-ens {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 14px;
+}
+.kpi-value-ens {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+.kpi-subtitle-ens {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+}
+.stats-card-ens {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.04), 6, 0, 0, 1);
+}
+.alert-card-ens {
+    -fx-background-color: #fff8e7;
+    -fx-border-color: #f1b27a;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+    -fx-padding: 15;
+}
+.section-title-ens {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e293b;
+}
+.detail-card {
+    -fx-background-color: white;
+    -fx-border-radius: 12;
+    -fx-border-color: #e2e8f0;
+    -fx-padding: 15;
+}
+.primary-button {
+    -fx-background-color: #3b82f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+}
+.secondary-button {
+    -fx-background-color: transparent;
+    -fx-border-color: #3b82f6;
+    -fx-text-fill: #3b82f6;
+    -fx-border-radius: 20;
+    -fx-padding: 6 16;
+    -fx-cursor: hand;
+}
