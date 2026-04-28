@@ -11,6 +11,10 @@ public class PlanningService {
 	
 	private List<Seance> seances = new ArrayList<Seance>();
 	
+	
+	// fonctions de verifications de conflits lors de la planification d'une seance
+	
+/*************************************/
 	public void verifierConflits(Seance nouvelle) throws ConflitHoraireException {
 		for (Seance existante : seances) {
 			
@@ -30,16 +34,20 @@ public class PlanningService {
 	}
 	public void verifierGroupe(Seance a , Seance b) throws ConflitHoraireException {
 		if (a.getGroupe().equals(b.getGroupe())) {
-			throw new ConflitHoraireException("Ce Groupe a deja une seance");
+			throw new ConflitHoraireException("Ce Groupe a deja une seance programmée");
 		}
+	}
 		
 		public void verifierEnseignant(Seance a , Seance b) throws ConflitHoraireException {
 			if (a.getSalle().equals(b.getSalle())) {
 				throw new ConflitHoraireException("Cet enseignant a deja une seance programmé");
 			}
-		
 	}
-	public void ajouterSeance (Seance seance) {
+/*******************************/
+		
+// ajout d'une seance
+		
+	public void ajouterSeance (Seance seance) throws ConflitHoraireException {
 		verifierConflits(seance);
 		seances.add(seance);
 	}

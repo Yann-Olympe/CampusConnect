@@ -7,7 +7,7 @@ public class Enseignant extends Personne {
 	 private String departement;
 	 private List<Cours> coursDispense;
 	
-	public Enseignant() {
-		// TODO Auto-generated constructor stub
+	public Enseignant(E) {
+		super()
 	}
 }

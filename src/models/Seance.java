@@ -18,8 +18,7 @@ public class Seance {
             }
         
         public boolean chevauche (Seance autre) {
-        	
-        	return this.date.equals(autre.date) && this.heureDebut.isBefore(autre.heureFin)   && this.heureFin.isAfter(autre.heureDebut);    	
+        	    return this.date.equals(autre.date) && this.heureDebut.isBefore(autre.heureFin) && this.heureFin.isAfter(autre.heureDebut);    	
         }
         
         
