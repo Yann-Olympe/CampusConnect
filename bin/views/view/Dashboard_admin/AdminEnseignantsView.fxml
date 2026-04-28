@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CampusConnect.controllers.Controllers_admin.AdminEnseignantsController"
+      spacing="18.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_admin.css">
+
+    <children>
+        <Label text="Gestion des enseignants" styleClass="page-title"/>
+
+        <VBox spacing="12.0" styleClass="card">
+            <padding><Insets top="16.0" right="16.0" bottom="16.0" left="16.0"/></padding>
+            <children>
+                <Label text="Formulaire enseignant" styleClass="section-title"/>
+
+                <GridPane hgap="12.0" vgap="12.0">
+                    <children>
+                        <TextField fx:id="nomField" promptText="Nom"/>
+                        <TextField fx:id="prenomField" promptText="Prénom" GridPane.columnIndex="1"/>
+                        <TextField fx:id="emailField" promptText="Email" GridPane.columnIndex="2"/>
+                        <ComboBox fx:id="statutCombo" promptText="Statut" prefWidth="180.0" GridPane.columnIndex="3"/>
+
+                        <TextField fx:id="departementField" promptText="Département" GridPane.rowIndex="1"/>
+                        <TextField fx:id="specialiteField" promptText="Spécialité" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                        <TextField fx:id="telephoneField" promptText="Téléphone" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    </children>
+                </GridPane>
+
+                <HBox spacing="10.0">
+                    <children>
+                        <Button text="Ajouter" styleClass="primary-btn" onAction="#handleAjouter"/>
+                        <Button text="Modifier" styleClass="secondary-btn" onAction="#handleModifier"/>
+                        <Button text="Supprimer" styleClass="danger-btn" onAction="#handleSupprimer"/>
+                        <Button text="Réinitialiser" styleClass="secondary-btn" onAction="#handleReset"/>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+
+        <HBox spacing="10.0">
+            <children>
+                <TextField fx:id="searchField" promptText="Rechercher un enseignant...">
+                    <HBox.hgrow><Priority>ALWAYS</Priority></HBox.hgrow>
+                </TextField>
+                <ComboBox fx:id="filterDepartementCombo" promptText="Tous les départements" prefWidth="220.0"/>
+                <ComboBox fx:id="filterStatutCombo" promptText="Tous les statuts" prefWidth="180.0"/>
+                <Button text="Actualiser" styleClass="secondary-btn" onAction="#handleRefresh"/>
+            </children>
+        </HBox>
+
+        <VBox styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+            <children>
+                <TableView fx:id="enseignantsTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                    <columns>
+                        <TableColumn fx:id="colNom" text="Nom" prefWidth="120.0"/>
+                        <TableColumn fx:id="colPrenom" text="Prénom" prefWidth="120.0"/>
+                        <TableColumn fx:id="colEmail" text="Email" prefWidth="220.0"/>
+                        <TableColumn fx:id="colDepartement" text="Département" prefWidth="180.0"/>
+                        <TableColumn fx:id="colSpecialite" text="Spécialité" prefWidth="180.0"/>
+                        <TableColumn fx:id="colStatut" text="Statut" prefWidth="130.0"/>
+                        <TableColumn fx:id="colChargeHoraire" text="Charge horaire" prefWidth="130.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

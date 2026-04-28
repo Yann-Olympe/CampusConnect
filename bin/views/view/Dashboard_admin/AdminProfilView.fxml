@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CampusConnect.controllers.Controllers_admin.AdminProfilController"
+      spacing="18.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_admin.css">
+
+    <children>
+        <Label text="Mon profil administrateur" styleClass="page-title"/>
+
+        <VBox styleClass="card" spacing="10.0">
+            <padding><Insets top="18.0" right="18.0" bottom="18.0" left="18.0"/></padding>
+            <children>
+                <Label fx:id="nomLabel" text="Nom : -" styleClass="page-subtitle"/>
+                <Label fx:id="emailLabel" text="Email : -" styleClass="page-subtitle"/>
+                <Label fx:id="roleLabel" text="Rôle : -" styleClass="page-subtitle"/>
+                <Label fx:id="derniereConnexionLabel" text="Dernière connexion : -" styleClass="page-subtitle"/>
+            </children>
+        </VBox>
+
+        <GridPane hgap="15.0" vgap="15.0">
+            <children>
+                <VBox styleClass="stat-card">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Actions du jour" styleClass="stat-title"/>
+                        <Label fx:id="actionsJourLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="stat-card" GridPane.columnIndex="1">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Rapports générés" styleClass="stat-title"/>
+                        <Label fx:id="rapportsLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="stat-card" GridPane.columnIndex="2">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Conflits résolus" styleClass="stat-title"/>
+                        <Label fx:id="conflitsResolusLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+    </children>
+</VBox>

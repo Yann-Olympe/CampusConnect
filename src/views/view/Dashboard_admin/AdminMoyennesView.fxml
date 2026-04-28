@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CampusConnect.controllers.Controllers_admin.AdminMoyennesController"
+      spacing="18.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_admin.css">
+
+    <children>
+        <Label text="Moyennes / résultats académiques" styleClass="page-title"/>
+
+        <HBox spacing="10.0">
+            <children>
+                <ComboBox fx:id="filterFiliereCombo" promptText="Toutes les filières" prefWidth="220.0"/>
+                <ComboBox fx:id="filterDecisionCombo" promptText="Toutes les décisions" prefWidth="180.0"/>
+                <Button text="Actualiser" styleClass="secondary-btn" onAction="#handleRefresh"/>
+            </children>
+        </HBox>
+
+        <VBox styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+            <children>
+                <TableView fx:id="moyennesTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                    <columns>
+                        <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="140.0"/>
+                        <TableColumn fx:id="colEtudiant" text="Étudiant" prefWidth="220.0"/>
+                        <TableColumn fx:id="colFiliere" text="Filière" prefWidth="180.0"/>
+                        <TableColumn fx:id="colMoyenne" text="Moyenne" prefWidth="100.0"/>
+                        <TableColumn fx:id="colDecision" text="Décision" prefWidth="140.0"/>
+                        <TableColumn fx:id="colRang" text="Rang" prefWidth="90.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

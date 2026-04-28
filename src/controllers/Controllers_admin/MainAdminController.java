@@ -1,68 +1,224 @@
 package controllers.Controllers_admin;
 
 import javafx.fxml.FXML;
-
 import javafx.fxml.FXMLLoader;
-import javafx.scene.chart.*;
-import javafx.scene.control.*;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
+
 import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainAdminController {
 
     @FXML private StackPane contentArea;
-    @FXML private Label pageTitleLabel, adminNameLabel, adminRoleLabel, adminNameSidebar, adminRoleSidebar;
-    @FXML private Button btnDashboard, btnEtudiants, btnEnseignants, btnCours, btnGroupes, btnSalles;
-    @FXML private Button btnInscriptions, btnPlanning, btnSuivi, btnUtilisateurs, btnRapports, btnStatistiques, btnLogout;
+    @FXML private Label topTitleLabel;
+    @FXML private Label topSubtitleLabel;
 
-    // ========== Champs pour DashboardAccueilAdminView ==========
-    @FXML private Label currentDateLabel;
-    @FXML private Label nbEtudiantsLabel, nbEnseignantsLabel, nbCoursLabel, nbGroupesLabel, nbSallesLabel;
-    @FXML private Label nbConflitsLabel, nbSeancesLabel, tauxOccupationLabel;
-    @FXML private PieChart pieChartFiliere;
-    @FXML private BarChart<String, Number> barChartAnnee, barChartOccupation, barChartMoyennes;
-    @FXML private ListView<String> conflitsListView, activitesListView;
+    @FXML private Button btnDashboard;
+    @FXML private Button btnEtudiants;
+    @FXML private Button btnEnseignants;
+    @FXML private Button btnUtilisateurs;
+    @FXML private Button btnCours;
+    @FXML private Button btnGroupes;
+    @FXML private Button btnSalles;
+    @FXML private Button btnInscriptions;
+    @FXML private Button btnPlannings;
+    @FXML private Button btnConflits;
+    @FXML private Button btnNotes;
+    @FXML private Button btnMoyennes;
+    @FXML private Button btnRapports;
+    @FXML private Button btnStatistiques;
+    @FXML private Button btnNotifications;
+    @FXML private Button btnParametres;
+    @FXML private Button btnProfil;
+    @FXML private Button btnLogout;
+
+    private List<Button> navButtons;
 
     @FXML
     public void initialize() {
-        // Mettre à jour la date
-       
-        // Charger la vue par défaut (tableau de bord)
+        navButtons = new ArrayList<>();
+        navButtons.add(btnDashboard);
+        navButtons.add(btnEtudiants);
+        navButtons.add(btnEnseignants);
+        navButtons.add(btnUtilisateurs);
+        navButtons.add(btnCours);
+        navButtons.add(btnGroupes);
+        navButtons.add(btnSalles);
+        navButtons.add(btnInscriptions);
+        navButtons.add(btnPlannings);
+        navButtons.add(btnConflits);
+        navButtons.add(btnNotes);
+        navButtons.add(btnMoyennes);
+        navButtons.add(btnRapports);
+        navButtons.add(btnStatistiques);
+        navButtons.add(btnNotifications);
+        navButtons.add(btnParametres);
+        navButtons.add(btnProfil);
+
         showDashboard();
     }
 
-    private void loadView(String fxml) {
-        try {
-            contentArea.getChildren().clear();
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/views/view/Dashboard_admin/" + fxml));
-            contentArea.getChildren().add(loader.load());
-        } catch (IOException e) {
-            e.printStackTrace();
-            // Optionnel : afficher une alerte à l'utilisateur
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setContentText("Erreur de chargement : " + fxml + "\n" + e.getMessage());
-            alert.show();
+    private void setActiveButton(Button activeButton) {
+        for (Button btn : navButtons) {
+            if (btn == null) continue;
+            btn.getStyleClass().removeAll("nav-btn-active");
+            if (!btn.getStyleClass().contains("nav-btn")) {
+                btn.getStyleClass().add("nav-btn");
+            }
+        }
+
+        if (activeButton != null) {
+            activeButton.getStyleClass().remove("nav-btn");
+            if (!activeButton.getStyleClass().contains("nav-btn-active")) {
+                activeButton.getStyleClass().add("nav-btn-active");
+            }
         }
     }
 
-    @FXML public void showDashboard()   { loadView("DashboardAccueilAdminView.fxml"); pageTitleLabel.setText("Administration - Tableau de bord"); }
-    @FXML public void showEtudiants()   { loadView("GestionEtudiantsView.fxml"); pageTitleLabel.setText("Administration - Gestion des étudiants"); }
-    @FXML public void showEnseignants() { loadView("GestionEnseignantsView.fxml"); pageTitleLabel.setText("Administration - Gestion des enseignants"); }
-    @FXML public void showCours()       { loadView("GestionCoursView.fxml"); pageTitleLabel.setText("Administration - Gestion des cours"); }
-    @FXML public void showGroupes()     { loadView("GestionGroupesView.fxml"); pageTitleLabel.setText("Administration - Gestion des groupes"); }
-    @FXML public void showSalles()      { loadView("GestionSallesView.fxml"); pageTitleLabel.setText("Administration - Gestion des salles"); }
-    @FXML public void showInscriptions(){ loadView("InscriptionsView.fxml"); pageTitleLabel.setText("Administration - Inscriptions aux groupes"); }
-    @FXML public void showPlanning()    { loadView("PlanningAdminView.fxml"); pageTitleLabel.setText("Administration - Planning général"); }
-    @FXML public void showSuivi()       { loadView("SuiviAcademiqueView.fxml"); pageTitleLabel.setText("Administration - Suivi académique"); }
-    @FXML public void showUtilisateurs(){ loadView("GestionUtilisateursView.fxml"); pageTitleLabel.setText("Administration - Gestion des comptes"); }
-    @FXML public void showRapports()    { loadView("RapportsView.fxml"); pageTitleLabel.setText("Administration - Rapports exportables"); }
-    @FXML public void showStatistiques(){ loadView("StatistiquesView.fxml"); pageTitleLabel.setText("Administration - Statistiques globales"); }
+    private void loadView(String fxmlName, String title, String subtitle, Button activeButton) {
+        try {
+            URL resource = getClass().getResource("/views/view/Dashboard_admin/" + fxmlName);
+
+            if (resource == null) {
+                System.err.println("FXML introuvable : /views/view/Dashboard_admin/" + fxmlName);
+                return;
+            }
+
+            FXMLLoader loader = new FXMLLoader(resource);
+            Parent view = loader.load();
+
+            contentArea.getChildren().clear();
+            contentArea.getChildren().add(view);
+
+            if (topTitleLabel != null) topTitleLabel.setText(title);
+            if (topSubtitleLabel != null) topSubtitleLabel.setText(subtitle);
+
+            setActiveButton(activeButton);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    public void showDashboard() {
+        loadView("AdminDashboardView.fxml", "Tableau de bord administrateur",
+                "Pilotage global de l'établissement", btnDashboard);
+    }
+
+    @FXML
+    public void showEtudiants() {
+        loadView("AdminEtudiantsView.fxml", "Gestion des étudiants",
+                "Création, modification, suppression et consultation", btnEtudiants);
+    }
+
+    @FXML
+    public void showEnseignants() {
+        loadView("AdminEnseignantsView.fxml", "Gestion des enseignants",
+                "Administration du corps enseignant et affectations", btnEnseignants);
+    }
+
+    @FXML
+    public void showUtilisateurs() {
+        loadView("AdminUtilisateursView.fxml", "Utilisateurs / Comptes",
+                "Gestion des accès et des rôles système", btnUtilisateurs);
+    }
+
+    @FXML
+    public void showCours() {
+        loadView("AdminCoursView.fxml", "Gestion des cours",
+                "Offre de formation et responsables pédagogiques", btnCours);
+    }
+
+    @FXML
+    public void showGroupes() {
+        loadView("AdminGroupesView.fxml", "Gestion des groupes",
+                "Organisation CM / TD / TP et affectations", btnGroupes);
+    }
+
+    @FXML
+    public void showSalles() {
+        loadView("AdminSallesView.fxml", "Gestion des salles",
+                "Capacité, type et occupation des salles", btnSalles);
+    }
+
+    @FXML
+    public void showInscriptions() {
+        loadView("AdminInscriptionsView.fxml", "Gestion des inscriptions",
+                "Affectation des étudiants aux groupes", btnInscriptions);
+    }
+
+    @FXML
+    public void showPlannings() {
+        loadView("AdminPlanningsView.fxml", "Gestion des plannings",
+                "Planification des séances académiques", btnPlannings);
+    }
+
+    @FXML
+    public void showConflits() {
+        loadView("AdminConflitsView.fxml", "Gestion des conflits",
+                "Détection et résolution des conflits horaires", btnConflits);
+    }
+
+    @FXML
+    public void showNotes() {
+        loadView("AdminNotesView.fxml", "Consultation des notes",
+                "Suivi des évaluations et résultats", btnNotes);
+    }
+
+    @FXML
+    public void showMoyennes() {
+        loadView("AdminMoyennesView.fxml", "Moyennes / Résultats",
+                "Analyse académique globale des étudiants", btnMoyennes);
+    }
+
+    @FXML
+    public void showRapports() {
+        loadView("AdminRapportsView.fxml", "Rapports exportables",
+                "Production de documents académiques", btnRapports);
+    }
+
+    @FXML
+    public void showStatistiques() {
+        loadView("AdminStatistiquesView.fxml", "Statistiques académiques",
+                "Indicateurs et graphiques de pilotage", btnStatistiques);
+    }
+
+    @FXML
+    public void showNotifications() {
+        loadView("AdminNotificationsView.fxml", "Notifications / Alertes",
+                "Suivi des événements critiques du système", btnNotifications);
+    }
+
+    @FXML
+    public void showParametres() {
+        loadView("AdminParametresView.fxml", "Paramètres système",
+                "Configuration institutionnelle et académique", btnParametres);
+    }
+
+    @FXML
+    public void showProfil() {
+        loadView("AdminProfilView.fxml", "Mon profil administrateur",
+                "Informations personnelles et activité", btnProfil);
+    }
 
     @FXML
     public void logout() {
         try {
-            javafx.scene.Parent root = FXMLLoader.load(getClass().getResource("/views/view/AdminLoginView.fxml"));
+            URL resource = getClass().getResource("/views/view/LoginView.fxml");
+            if (resource == null) {
+                System.err.println("LoginView.fxml introuvable");
+                return;
+            }
+
+            Parent root = FXMLLoader.load(resource);
             contentArea.getScene().setRoot(root);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

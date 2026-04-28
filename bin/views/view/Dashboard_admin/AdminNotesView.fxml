@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CampusConnect.controllers.Controllers_admin.AdminNotesController"
+      spacing="18.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_admin.css">
+
+    <children>
+        <Label text="Consultation des notes" styleClass="page-title"/>
+
+        <HBox spacing="10.0">
+            <children>
+                <ComboBox fx:id="filterCoursCombo" promptText="Tous les cours" prefWidth="220.0"/>
+                <ComboBox fx:id="filterGroupeCombo" promptText="Tous les groupes" prefWidth="180.0"/>
+                <ComboBox fx:id="filterEvaluationCombo" promptText="Toutes les évaluations" prefWidth="180.0"/>
+                <Button text="Actualiser" styleClass="secondary-btn" onAction="#handleRefresh"/>
+            </children>
+        </HBox>
+
+        <VBox styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+            <children>
+                <TableView fx:id="notesTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                    <columns>
+                        <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="140.0"/>
+                        <TableColumn fx:id="colEtudiant" text="Étudiant" prefWidth="220.0"/>
+                        <TableColumn fx:id="colCours" text="Cours" prefWidth="200.0"/>
+                        <TableColumn fx:id="colGroupe" text="Groupe" prefWidth="120.0"/>
+                        <TableColumn fx:id="colEvaluation" text="Évaluation" prefWidth="150.0"/>
+                        <TableColumn fx:id="colNote" text="Note" prefWidth="100.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

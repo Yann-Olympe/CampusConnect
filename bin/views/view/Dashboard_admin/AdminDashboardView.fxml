@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="CampusConnect.controllers.Controllers_admin.AdminDashboardController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_admin.css">
+
+    <children>
+        <Label text="Tableau de bord administrateur" styleClass="page-title"/>
+
+        <GridPane hgap="15.0" vgap="15.0">
+            <children>
+                <VBox styleClass="stat-card">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Étudiants" styleClass="stat-title"/>
+                        <Label fx:id="totalEtudiantsLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="stat-card" GridPane.columnIndex="1">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Enseignants" styleClass="stat-title"/>
+                        <Label fx:id="totalEnseignantsLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="stat-card" GridPane.columnIndex="2">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Cours actifs" styleClass="stat-title"/>
+                        <Label fx:id="totalCoursLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="stat-card" GridPane.columnIndex="3">
+                    <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+                    <children>
+                        <Label text="Conflits détectés" styleClass="stat-title"/>
+                        <Label fx:id="totalConflitsLabel" text="0" styleClass="stat-value"/>
+                    </children>
+                </VBox>
+            </children>
+        </GridPane>
+
+        <HBox spacing="20.0" VBox.vgrow="ALWAYS">
+            <children>
+                <VBox styleClass="card" spacing="12.0" HBox.hgrow="ALWAYS">
+                    <padding><Insets top="18.0" right="18.0" bottom="18.0" left="18.0"/></padding>
+                    <children>
+                        <Label text="Activités récentes" styleClass="section-title"/>
+                        <ListView fx:id="recentActivitiesList" VBox.vgrow="ALWAYS"/>
+                    </children>
+                </VBox>
+
+                <VBox styleClass="card" spacing="12.0" prefWidth="360.0">
+                    <padding><Insets top="18.0" right="18.0" bottom="18.0" left="18.0"/></padding>
+                    <children>
+                        <Label text="Résumé académique" styleClass="section-title"/>
+                        <Label fx:id="resumeFiliereLabel" text="Répartition par filière : -"/>
+                        <Label fx:id="resumeNiveauLabel" text="Répartition par niveau : -"/>
+                        <Label fx:id="occupationSallesLabel" text="Occupation des salles : -"/>
+                        <Label fx:id="tauxReussiteLabel" text="Taux de réussite global : -"/>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</VBox>

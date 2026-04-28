@@ -41,7 +41,7 @@ public class AdminLoginController {
 
         // Connexion réussie : redirection vers DashboardAdminView
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("/views/view/Dashboard_admin/DashboardAdminView.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/views/view/Dashboard_admin/MainAdminView.fxml"));
             Stage stage = (Stage) btnLogin.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Tableau de bord Administrateur");
