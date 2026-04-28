@@ -11,45 +11,36 @@
 
 <VBox xmlns="http://javafx.com/javafx/21"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="CampusConnect.controllers.Controllers_admin.AdminInscriptionsController"
+      fx:controller="controllers.Controllers_admin.AdminInscriptionsController"
       spacing="18.0"
       styleClass="content-root"
       stylesheets="@../../css/dashboard_admin.css">
 
-    <children>
-        <Label text="Gestion des inscriptions aux groupes" styleClass="page-title"/>
+    <Label text="Gestion des inscriptions aux groupes" styleClass="page-title"/>
 
-        <VBox spacing="12.0" styleClass="card">
-            <padding><Insets top="16.0" right="16.0" bottom="16.0" left="16.0"/></padding>
-            <children>
-                <Label text="Inscription manuelle" styleClass="section-title"/>
+    <VBox spacing="12.0" styleClass="card">
+        <padding><Insets top="16.0" right="16.0" bottom="16.0" left="16.0"/></padding>
+        <Label text="Inscription manuelle" styleClass="section-title"/>
+        <HBox spacing="10.0">
+            <ComboBox fx:id="etudiantCombo" promptText="Étudiant" prefWidth="260.0"/>
+            <ComboBox fx:id="coursCombo" promptText="Cours" prefWidth="220.0"/>
+            <ComboBox fx:id="groupeCombo" promptText="Groupe" prefWidth="180.0"/>
+            <Button text="Inscrire" styleClass="primary-btn" onAction="#handleInscrire"/>
+            <Button text="Retirer" styleClass="danger-btn" onAction="#handleRetirer"/>
+        </HBox>
+    </VBox>
 
-                <HBox spacing="10.0">
-                    <children>
-                        <ComboBox fx:id="etudiantCombo" promptText="Étudiant" prefWidth="260.0"/>
-                        <ComboBox fx:id="coursCombo" promptText="Cours" prefWidth="220.0"/>
-                        <ComboBox fx:id="groupeCombo" promptText="Groupe" prefWidth="180.0"/>
-                        <Button text="Inscrire" styleClass="primary-btn" onAction="#handleInscrire"/>
-                        <Button text="Retirer" styleClass="danger-btn" onAction="#handleRetirer"/>
-                    </children>
-                </HBox>
-            </children>
-        </VBox>
-
-        <VBox styleClass="card" VBox.vgrow="ALWAYS">
-            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
-            <children>
-                <TableView fx:id="inscriptionsTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
-                    <columns>
-                        <TableColumn fx:id="colEtudiant" text="Étudiant" prefWidth="240.0"/>
-                        <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="140.0"/>
-                        <TableColumn fx:id="colCours" text="Cours" prefWidth="200.0"/>
-                        <TableColumn fx:id="colGroupe" text="Groupe" prefWidth="120.0"/>
-                        <TableColumn fx:id="colType" text="Type" prefWidth="100.0"/>
-                        <TableColumn fx:id="colSalle" text="Salle" prefWidth="120.0"/>
-                    </columns>
-                </TableView>
-            </children>
-        </VBox>
-    </children>
+    <VBox styleClass="card" VBox.vgrow="ALWAYS">
+        <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+        <TableView fx:id="inscriptionsTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+            <columns>
+                <TableColumn fx:id="colEtudiant" text="Étudiant" prefWidth="240.0"/>
+                <TableColumn fx:id="colMatricule" text="Matricule" prefWidth="140.0"/>
+                <TableColumn fx:id="colCours" text="Cours" prefWidth="200.0"/>
+                <TableColumn fx:id="colGroupe" text="Groupe" prefWidth="120.0"/>
+                <TableColumn fx:id="colType" text="Type" prefWidth="100.0"/>
+                <TableColumn fx:id="colSalle" text="Salle" prefWidth="120.0"/>
+            </columns>
+        </TableView>
+    </VBox>
 </VBox>
