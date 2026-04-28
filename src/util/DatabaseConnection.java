@@ -1,4 +1,4 @@
-package dao;
+package util;
 // Classe utiliaire pour la connexion a la BD 
 
 import java.sql.Connection;

@@ -3,6 +3,7 @@ module CampusConnect {
     requires javafx.controls;
     requires javafx.fxml;
 	requires javafx.base;
+	requires java.sql;
 
     // Ouvre le package contenant vos contrôleurs FXML
     opens controllers to javafx.fxml;
