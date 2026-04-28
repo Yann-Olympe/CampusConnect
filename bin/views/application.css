@@ -1,1 +1,302 @@
-/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/* ========== COULEURS PRINCIPALES ========== */
+.root {
+    -fx-font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+    -fx-background-color: #1e293b;
+    -fx-pref-width: 240;
+    -fx-spacing: 10;
+}
+
+.brand {
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+    -fx-padding: 20 0 15 20;
+}
+
+.profile {
+    -fx-padding: 10 15 15 15;
+    -fx-spacing: 12;
+}
+
+.profile-name {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.profile-meta {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11;
+}
+
+.nav-item, .nav-item-selected, .nav-logout {
+    -fx-padding: 10 0 10 20;
+    -fx-cursor: hand;
+    -fx-font-size: 13;
+}
+
+.nav-item {
+    -fx-text-fill: #cbd5e1;
+}
+
+.nav-item:hover, .nav-item-selected {
+    -fx-background-color: #334155;
+}
+
+.nav-item-selected {
+    -fx-text-fill: #3b82f6;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 0 0 0 3;
+}
+
+.nav-logout {
+    -fx-text-fill: #ef4444;
+    -fx-padding: 15 0 20 20;
+}
+
+.nav-logout:hover {
+    -fx-background-color: #334155;
+}
+
+/* ========== CONTENU PRINCIPAL ========== */
+.content-pane {
+    -fx-background-color: #f1f5f9;
+}
+
+.card {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+}
+
+.card-title {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+.card-subtitle {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 12;
+}
+
+.card-header {
+    -fx-font-size: 15;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 10 0;
+}
+
+.page-title {
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0f172a;
+}
+
+/* ========== KPI CARDS ========== */
+.kpi-card {
+    -fx-background-color: white;
+    -fx-padding: 15;
+    -fx-background-radius: 12;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 5, 0, 0, 1);
+   /* HBox.hgrow: ALWAYS; */
+}
+
+.kpi-value {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+}
+
+.kpi-value-green {
+    -fx-text-fill: #10b981;
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+}
+
+.kpi-value-red {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+}
+
+.kpi-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 12;
+}
+
+.kpi-hint-up {
+    -fx-text-fill: #3b82f6;
+    -fx-font-size: 10;
+}
+
+.kpi-hint-down {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 10;
+}
+
+.kpi-hint-neutral {
+    -fx-text-fill: #f59e0b;
+    -fx-font-size: 10;
+}
+
+/* ========== STATISTIQUES HERO ========== */
+.stat-number {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #3b82f6;
+}
+
+.stat-number-warning {
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ef4444;
+}
+
+.stat-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11;
+}
+
+.stat-up {
+    -fx-text-fill: #10b981;
+    -fx-font-size: 10;
+}
+
+.stat-down {
+    -fx-text-fill: #ef4444;
+    -fx-font-size: 10;
+}
+
+.stat-neutral {
+    -fx-text-fill: #f59e0b;
+    -fx-font-size: 10;
+}
+
+/* ========== BADGES DATES ========== */
+.date-badge {
+    -fx-background-color: #f1f5f9;
+    -fx-padding: 8 5;
+    -fx-min-width: 45;
+    -fx-background-radius: 8;
+    -fx-alignment: center;
+}
+
+.date-num {
+    -fx-font-weight: bold;
+    -fx-font-size: 16;
+}
+
+.date-day {
+    -fx-font-size: 10;
+    -fx-text-fill: #64748b;
+}
+
+.course-name {
+    -fx-font-weight: bold;
+    -fx-font-size: 13;
+}
+
+.course-detail {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11;
+}
+
+.tag-live {
+    -fx-text-fill: #10b981;
+    -fx-font-weight: bold;
+    -fx-font-size: 11;
+}
+
+.tag-today {
+    -fx-text-fill: #3b82f6;
+    -fx-font-size: 11;
+}
+
+.tag-soon {
+    -fx-text-fill: #f59e0b;
+    -fx-font-size: 11;
+}
+
+/* ========== NOTES ========== */
+.note-good {
+    -fx-text-fill: #10b981;
+    -fx-font-weight: bold;
+}
+
+.note-average {
+    -fx-text-fill: #f59e0b;
+    -fx-font-weight: bold;
+}
+
+.note-bad {
+    -fx-text-fill: #ef4444;
+    -fx-font-weight: bold;
+}
+
+/* ========== COURS ========== */
+.course-code {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11;
+}
+
+.course-name-large {
+    -fx-font-size: 16;
+    -fx-font-weight: bold;
+}
+
+.course-meta {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 12;
+}
+
+.detail-meta {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11;
+}
+
+/* ========== PLANNING ========== */
+.day-title {
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 8 0;
+}
+
+.time-slot {
+    -fx-text-fill: #3b82f6;
+    -fx-font-weight: bold;
+}
+
+/* ========== INSCRIPTIONS ========== */
+.capacity-good {
+    -fx-text-fill: #10b981;
+}
+
+.capacity-warning {
+    -fx-text-fill: #f59e0b;
+}
+
+.capacity-full {
+    -fx-text-fill: #ef4444;
+}
+
+.btn-inscrire {
+    -fx-background-color: #10b981;
+    -fx-text-fill: white;
+    -fx-background-radius: 6;
+    -fx-padding: 5 12;
+    -fx-cursor: hand;
+}
+
+.btn-inscrire:hover {
+    -fx-background-color: #059669;
+}
+
+.btn-complet {
+    -fx-background-color: #cbd5e1;
+    -fx-text-fill: #64748b;
+    -fx-background-radius: 6;
+    -fx-padding: 5 12;
+}/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */

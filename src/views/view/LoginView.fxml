@@ -6,6 +6,8 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
@@ -14,16 +16,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="702.0" prefWidth="888.0" style="-fx-background-color: linear-gradient(from 0% 0% to 60% 100%, #0d1b2e, #1a2d4a, #0d1b2e);" stylesheets="@login.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.LoginController">
    <children>
-      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0" spacing="8.0">
-         <children>
-            <Label style="-fx-background-color: #4a9edd;" styleClass="brand-cc" text="CC">
-               <font>
-                  <Font name="System Bold" size="15.0" />
-               </font>
-            </Label>
-            <Label prefHeight="37.0" prefWidth="102.0" styleClass="brand-name" text="CAMPUSCONNECT" textFill="#eceaea" />
-         </children>
-      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="14.0" layoutY="14.0" spacing="8.0" />
       <VBox alignment="TOP_CENTER" layoutX="168.0" layoutY="14.0" opacity="0.76" prefHeight="674.0" prefWidth="566.0" spacing="0" style="-fx-background-color: #ffffff0d;                -fx-border-color: #4a9edd4d;                -fx-border-width: 0.5;                -fx-border-radius: 16;                -fx-background-radius: 16;                -fx-effect: dropshadow(gaussian, #00000077, 20, 0, 0, 6);">
          <padding>
             <Insets bottom="40" left="32" right="32" top="40" />
@@ -106,5 +99,15 @@
          </children>
       </VBox>
       <Button fx:id="btnAdminAccess" layoutX="830.0" layoutY="644.0" onAction="#handleAdminAccess" opacity="0.47" prefHeight="44" prefWidth="44" style="-fx-background-color: #4a9edd1a;                    -fx-border-color: #4a9edd;                    -fx-border-width: 1.5;                    -fx-border-radius: 22;                    -fx-background-radius: 22;                    -fx-font-size: 17;                    -fx-text-fill: #4a9edd;                    -fx-cursor: hand;" text="⚙" />
+      <ImageView fitHeight="144.0" fitWidth="110.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Logos/AZ2nQHmI3qeaBg5MU1W38w-AZ2nQHmI4cAFE-tPbsCQRQ.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="141.0" fitWidth="121.0" layoutX="14.0" layoutY="14.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Logos/Applogo.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

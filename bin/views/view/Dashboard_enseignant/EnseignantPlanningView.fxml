@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Controllers_enseignant.EnseignantPlanningController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_enseignant.css">
+
+    <children>
+        <HBox alignment="CENTER_LEFT" spacing="10.0">
+            <children>
+                <Label text="Mon planning" styleClass="page-title"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <ComboBox promptText="Semaine" styleClass="custom-combo" prefWidth="180.0"/>
+                <Button text="Aujourd’hui" styleClass="secondary-btn"/>
+                <Button text="Exporter" styleClass="secondary-btn"/>
+            </children>
+        </HBox>
+
+        <VBox spacing="12.0" styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+            <children>
+                <Label text="Planning enseignant" styleClass="section-title"/>
+                <TableView fx:id="planningTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                    <columns>
+                        <TableColumn fx:id="colJour" text="Jour" prefWidth="120.0"/>
+                        <TableColumn fx:id="colDate" text="Date" prefWidth="120.0"/>
+                        <TableColumn fx:id="colDebut" text="Début" prefWidth="90.0"/>
+                        <TableColumn fx:id="colFin" text="Fin" prefWidth="90.0"/>
+                        <TableColumn fx:id="colCours" text="Cours" prefWidth="240.0"/>
+                        <TableColumn fx:id="colGroupe" text="Groupe" prefWidth="120.0"/>
+                        <TableColumn fx:id="colSalle" text="Salle" prefWidth="180.0"/>
+                        <TableColumn fx:id="colType" text="Type" prefWidth="100.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

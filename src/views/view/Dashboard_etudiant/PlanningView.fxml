@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox spacing="20" style="-fx-padding: 20; -fx-background-color: #F5F7FB;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_etudiant.PlanningViewController">
+
+    <!-- Colonne gauche : planning de la semaine (tableau) -->
+    <VBox spacing="15" HBox.hgrow="ALWAYS">
+        <!-- En-tête avec navigation semaine -->
+        <HBox alignment="CENTER_LEFT" spacing="10">
+            <Button text="Semaine précédente" styleClass="secondary-button" onAction="#previousWeek" />
+            <Label fx:id="semaineLabel" text="Semaine 14 (07 - 13 Avril 2025)" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+            <Button text="Semaine suivante >" styleClass="secondary-button" onAction="#nextWeek" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Button text="Aujourd'hui" styleClass="primary-button" onAction="#goToToday" />
+        </HBox>
+
+        <!-- Tableau des séances de la semaine -->
+        <TableView fx:id="planningTable" VBox.vgrow="ALWAYS" styleClass="table-view">
+            <columns>
+                <TableColumn text="Jour" fx:id="colJour" prefWidth="120" />
+                <TableColumn text="Heure" fx:id="colHeure" prefWidth="100" />
+                <TableColumn text="Cours" fx:id="colCours" prefWidth="180" />
+                <TableColumn text="Type" fx:id="colType" prefWidth="80" />
+                <TableColumn text="Groupe" fx:id="colGroupe" prefWidth="90" />
+                <TableColumn text="Salle" fx:id="colSalle" prefWidth="90" />
+                <TableColumn text="Enseignant" fx:id="colEnseignant" prefWidth="160" />
+                <TableColumn text="Statut" fx:id="colStatut" prefWidth="100" />
+                <TableColumn text="Action" fx:id="colAction" prefWidth="100" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+            <placeholder>
+                <Label text="Aucune séance cette semaine" style="-fx-text-fill: #5F6F8E;" />
+            </placeholder>
+        </TableView>
+    </VBox>
+
+    <!-- Colonne droite : détails de la séance sélectionnée + légende -->
+    <VBox spacing="15" prefWidth="320">
+        <!-- Détails -->
+        <VBox spacing="10" styleClass="detail-card">
+            <Label text="📅 Détails de la séance" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: #1E63D5;" />
+            <Label fx:id="detailCours" text="-" />
+            <Label fx:id="detailType" text="-" />
+            <Label fx:id="detailGroupe" text="-" />
+            <Label fx:id="detailSalle" text="-" />
+            <Label fx:id="detailEnseignant" text="-" />
+            <Label fx:id="detailDate" text="-" />
+            <Label fx:id="detailHeure" text="-" />
+            <Label fx:id="detailStatut" text="-" />
+            <Button text="➕ Ajouter un rappel" styleClass="primary-button" onAction="#ajouterRappel" />
+        </VBox>
+
+        <!-- Légende des statuts -->
+        <VBox spacing="10" styleClass="alert-card">
+            <Label text="🏷️ Légende des statuts" style="-fx-font-size: 14px; -fx-font-weight: bold; -fx-text-fill: #1D2B4F;" />
+            <FlowPane hgap="15" vgap="8">
+                <Label text="● Planifiée" style="-fx-text-fill: #3b82f6;" />
+                <Label text="● Confirmée" style="-fx-text-fill: #10b981;" />
+                <Label text="● En cours" style="-fx-text-fill: #f59e0b;" />
+                <Label text="● Terminée" style="-fx-text-fill: #64748b;" />
+                <Label text="● Annulée" style="-fx-text-fill: #ef4444;" />
+                <Label text="● Reportée" style="-fx-text-fill: #8b5cf6;" />
+            </FlowPane>
+        </VBox>
+    </VBox>
+</HBox>

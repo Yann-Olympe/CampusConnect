@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f1f5f9;" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Controllers_etudiant.MonProfilController">
+   <children>
+      <Label style="-fx-font-size: 22; -fx-font-weight: bold;" text="Mon profil" textFill="#1e63d5" />
+      <HBox spacing="20">
+         <children>
+            <VBox spacing="15" styleClass="card" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Informations personnelles" />
+                  <GridPane hgap="10" vgap="10">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Nom :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="nomField" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" text="Kurain" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label style="-fx-font-weight: bold;" text="Prénom :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="prenomField" style="-fx-border-radius: 6px; -fx-background-radius: 6px;" text="Nagal" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-weight: bold;" text="Email :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="emailField" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" text="nagalkurain237@campusconnect.com" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-weight: bold;" text="Téléphone :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <TextField fx:id="telephoneField" style="-fx-border-radius: 6px; -fx-background-radius: 6px;" text="+237 678630199" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-weight: bold;" text="Date de naissance :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="dateNaissancePicker" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label style="-fx-font-weight: bold;" text="Adresse :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="adresseField" style="-fx-border-radius: 6px; -fx-background-radius: 6px;" text="Yaoundé, Cameroun" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox spacing="15" styleClass="card" HBox.hgrow="ALWAYS">
+               <children>
+                  <Label style="-fx-font-size: 16; -fx-font-weight: bold;" text="Informations académiques" />
+                  <GridPane hgap="10" vgap="10">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Matricule :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="matriculeField" editable="false" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" text="23G00708" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label style="-fx-font-weight: bold;" text="Filière :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <TextField fx:id="filiereField" style="-fx-border-radius: 6px; -fx-background-radius: 6px;" text="Informatique" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-weight: bold;" text="Niveau :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <ComboBox fx:id="niveauCombo" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" value="L3" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-weight: bold;" text="Semestre :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="semestreCombo" style="-fx-border-radius: 6px; -fx-background-radius: 6px;" value="S1" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label style="-fx-font-weight: bold;" text="Année académique :" textFill="#5e7ca6" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                        <ComboBox fx:id="anneeCombo" promptText="2025-2026" style="-fx-background-radius: 6px; -fx-border-radius: 6px;" value="2023-2024" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                     <columnConstraints>
+                        <ColumnConstraints />
+                        <ColumnConstraints />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_RIGHT" spacing="10">
+         <children>
+            <Button style="-fx-background-color: #94a3b8; -fx-text-fill: white; -fx-border-radius: 6px; -fx-background-radius: 6px; -fx-font-weight: bold;" text="Annuler" />
+            <Button style="-fx-background-color: #3b82f6; -fx-text-fill: white; -fx-background-radius: 6px; -fx-border-radius: 6px; -fx-font-weight: bold;" text="Enregistrer les modifications" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

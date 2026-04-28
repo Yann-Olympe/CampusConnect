@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controllers.Controllers_enseignant.EnseignantCoursController"
+      spacing="20.0"
+      styleClass="content-root"
+      stylesheets="@../../css/dashboard_enseignant.css">
+
+    <children>
+        <Label text="Mes cours" styleClass="page-title"/>
+
+        <HBox spacing="10.0">
+            <children>
+                <TextField promptText="Rechercher un cours..." styleClass="custom-input" HBox.hgrow="ALWAYS"/>
+                <ComboBox promptText="Tous les cours" styleClass="custom-combo" prefWidth="220.0"/>
+                <Button text="Actualiser" styleClass="secondary-btn"/>
+            </children>
+        </HBox>
+
+        <VBox spacing="12.0" styleClass="card" VBox.vgrow="ALWAYS">
+            <padding><Insets top="15.0" right="15.0" bottom="15.0" left="15.0"/></padding>
+            <children>
+                <Label text="Liste des cours dispensés" styleClass="section-title"/>
+                <TableView fx:id="coursTable" VBox.vgrow="ALWAYS" styleClass="custom-table">
+                    <columns>
+                        <TableColumn fx:id="colCode" text="Code" prefWidth="120.0"/>
+                        <TableColumn fx:id="colIntitule" text="Intitulé" prefWidth="250.0"/>
+                        <TableColumn fx:id="colDescription" text="Description" prefWidth="320.0"/>
+                        <TableColumn fx:id="colVolume" text="Volume horaire" prefWidth="130.0"/>
+                        <TableColumn fx:id="colNbGroupes" text="Groupes" prefWidth="100.0"/>
+                        <TableColumn fx:id="colRole" text="Rôle" prefWidth="130.0"/>
+                        <TableColumn fx:id="colActions" text="Actions" prefWidth="120.0"/>
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</VBox>

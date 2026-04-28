@@ -1,0 +1,420 @@
+/* =========================================================
+   GLOBAL CONTENT
+   ========================================================= */
+
+.content-scroll {
+    -fx-background: #F5F7FB;
+    -fx-background-color: #F5F7FB;
+    -fx-border-color: transparent;
+}
+
+.content-scroll > .viewport {
+    -fx-background-color: #F5F7FB;
+}
+
+.content-area {
+    -fx-background-color: #F5F7FB;
+}
+
+/* =========================================================
+   PANELS / CARDS
+   ========================================================= */
+
+.welcome-card,
+.panel-card,
+.kpi-card,
+.alert-card {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-effect: null;
+}
+
+.welcome-card {
+    -fx-background-color: linear-gradient(to right, #EAF3FF, #F7FBFF);
+}
+
+.alert-card {
+    -fx-background-color: #FFFFFF;
+}
+
+/* =========================================================
+   TITLES / TEXTS
+   ========================================================= */
+
+.welcome-title {
+    -fx-text-fill: #1E63D5;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+.welcome-subtitle {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+}
+
+.info-label {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.status-label {
+    -fx-text-fill: #2E9D4D;
+    -fx-background-color: #E6F7EC;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 3 8 3 8;
+    -fx-background-radius: 6px;
+}
+
+.section-title {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+.subsection-title {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+}
+
+.grid-label {
+    -fx-text-fill: #5F6F8E;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+/* =========================================================
+   KPI CARDS
+   ========================================================= */
+
+.kpi-card {
+    -fx-min-height: 120px;
+}
+
+.kpi-title {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.kpi-value {
+    -fx-text-fill: #1E63D5;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+.kpi-value.small {
+    -fx-font-size: 18px;
+}
+
+.kpi-subtitle {
+    -fx-text-fill: #5F6F8E;
+    -fx-font-size: 11px;
+}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+.primary-button {
+    -fx-background-color: #1E63D5;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-cursor: hand;
+    -fx-border-color: #1E63D5;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2F7AF8;
+    -fx-border-color: #2F7AF8;
+}
+
+.secondary-button {
+    -fx-background-color: white;
+    -fx-text-fill: #1E63D5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 14 8 14;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-color: #1E63D5;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #EAF3FF;
+}
+
+.link-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #1E63D5;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* =========================================================
+   FORM CONTROLS
+   ========================================================= */
+
+.text-field,
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #D7E3F3;
+    -fx-border-width: 1px;
+    -fx-border-radius: 6px;
+    -fx-background-radius: 6px;
+    -fx-padding: 6 10 6 10;
+    -fx-font-size: 12px;
+    -fx-text-fill: #1D2B4F;
+}
+
+.text-field:focused,
+.combo-box:focused {
+    -fx-border-color: #1E63D5;
+}
+
+/* =========================================================
+   LIST VIEW
+   ========================================================= */
+
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.list-cell {
+    -fx-padding: 8 10 8 10;
+    -fx-font-size: 12px;
+    -fx-text-fill: #1D2B4F;
+    -fx-background-color: white;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: #EAF3FF;
+    -fx-text-fill: #1E63D5;
+}
+
+/* =========================================================
+   TABLE VIEW
+   ========================================================= */
+
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 2px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F8FAFD;
+    -fx-background-radius: 8px 8px 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #D7E3F3 transparent;
+}
+
+.table-view .label {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-weight: bold;
+    -fx-font-size: 11px;
+}
+
+.table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: transparent transparent #EEF3FA transparent;
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: #EAF3FF;
+}
+
+.table-cell {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 11px;
+    -fx-padding: 6px;
+}
+
+/* =========================================================
+   CALENDAR GRID
+   ========================================================= */
+
+.calendar-grid {
+    -fx-background-color: white;
+    -fx-border-color: #D7E3F3;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-padding: 6px;
+}
+
+.calendar-header {
+    -fx-background-color: #F8FAFD;
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 8 6 8 6;
+}
+
+/* =========================================================
+   SESSION CARDS (PLANNING)
+   ========================================================= */
+
+.session-card-blue,
+.session-card-green,
+.session-card-orange,
+.session-card-purple,
+.session-card-yellow {
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-border-width: 1px;
+}
+
+/* Bleu */
+.session-card-blue {
+    -fx-background-color: #DCEBFF;
+    -fx-border-color: #6FA4FF;
+}
+
+/* Vert */
+.session-card-green {
+    -fx-background-color: #DDF4E5;
+    -fx-border-color: #8CD2A1;
+}
+
+/* Orange */
+.session-card-orange {
+    -fx-background-color: #FBE5D3;
+    -fx-border-color: #F1B27A;
+}
+
+/* Violet */
+.session-card-purple {
+    -fx-background-color: #E9DDFB;
+    -fx-border-color: #B89CEB;
+}
+
+/* Jaune */
+.session-card-yellow {
+    -fx-background-color: #F9EDC8;
+    -fx-border-color: #E7C96B;
+}
+
+.session-title {
+    -fx-text-fill: #1D2B4F;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+/* =========================================================
+   BADGES / STATUTS
+   ========================================================= */
+
+.badge-success {
+    -fx-background-color: #E6F7EC;
+    -fx-text-fill: #3BAE5A;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 6px;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.badge-warning {
+    -fx-background-color: #FFF5DD;
+    -fx-text-fill: #D79A1E;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 6px;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.badge-danger {
+    -fx-background-color: #FDEAEA;
+    -fx-text-fill: #D85A5A;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 6px;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+.badge-purple {
+    -fx-background-color: #F2EAFE;
+    -fx-text-fill: #9A67D7;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 6px;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+}
+
+/* ===== TABLEAU RESPONSIVE ===== */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.03), 4, 0, 0, 1);
+}
+
+/* En-têtes de colonnes */
+.table-view .column-header-background {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 12 12 0 0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 12 0 12 0;
+}
+.table-view .column-header .label {
+    -fx-text-fill: #475569;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+}
+
+/* Cellules */
+.table-view .table-cell {
+    -fx-alignment: CENTER;
+    -fx-padding: 10 8;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+}
+
+/* Lignes alternées */
+.table-row-cell:odd {
+    -fx-background-color: #f9fafb;
+}
+.table-row-cell:selected {
+    -fx-background-color: #eef2ff;
+}
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: #1e40af;
+}
+
+/* Politique de redimensionnement : les colonnes s'adaptent */
+.table-view .table-column {
+    -fx-min-width: 0px;
+}
+
+/* Centrage du tableau dans son conteneur */
+.vbox-with-table {
+    -fx-alignment: center;
+}
